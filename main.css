@@ -64,3 +64,14 @@ p {
   -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
      border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
 }
+
+footer {
+  margin-top: 50px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+footer a {
+  color: #AAA;
+  text-decoration: none;
+}
