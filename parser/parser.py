@@ -1,25 +1,42 @@
 # -*- coding: utf-8 -*-
 
 import csv
+from collections import defaultdict
+
+html_date_template = '''
+    <div class="timeline-item" date-is='{{date}}'>
+        {{paragraphs}}
+    </div>
+'''
 
 html_node_template = '''
-    <div class="timeline-item" date-is='{{date}}'>
         <a href={{link}} target="_blank">
         <p>
             {{description}}
         </p>
         </a>
-    </div>
 '''
 
-html_body = ''
+dates = []
+events = defaultdict(list)
 with open('data.csv') as f:
     reader = csv.reader(f)
     for idx, row in enumerate(reader):
         if idx > 0:
             (date, event, link, entry_id) = row
-            date = date.replace('/', '-')
-            html_body += html_node_template.replace('{{link}}', link).replace('{{date}}', date).replace('{{description}}', event)
+            if date:
+                date = date.replace('/', '-')
+                if date not in dates:
+                    dates.append(date)
+                events[date].append((event, link))
+
+html_body = ''
+for date in dates:
+    node = '\n <div class="separator">~</div> \n'.join([
+        html_node_template.replace('{{link}}', event[1]).replace('{{description}}', event[0]) for event in events[date]
+    ])
+
+    html_body += html_date_template.replace('{{date}}', date).replace('{{paragraphs}}', node)
 
 with open('template.html') as f:
     template = f.read()
