@@ -10,11 +10,10 @@ html_date_template = '''
 '''
 
 html_node_template = '''
-        <a href={{link}} target="_blank">
         <p>
             {{description}}
+            [<a href={{link}} target="_blank">Πηγή</a>]
         </p>
-        </a>
 '''
 
 dates = []
