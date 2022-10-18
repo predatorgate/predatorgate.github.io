@@ -2,10 +2,11 @@
 body {
   font-size: 14px;
   line-height: 1.5;
+  padding-top: 70px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .separator {
@@ -14,9 +15,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   text-align: center;
-}
-
-h1 {
   font-size: 2rem;
   margin-bottom: 0.5em;
 }
@@ -24,12 +22,6 @@ h1 {
 p {
   font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
-}
-
-.container {
-  max-width: 1024px;
-  width: 90%;
-  margin: 0 auto;
 }
 
 .timeline-item {
@@ -67,6 +59,14 @@ p {
 .timeline-item:last-child {
   -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
      border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.people-item {
+  padding: 3em 2em 2em;
+  position: relative;
+  color: rgba(0, 0, 0, 0.7);
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
 }
 
 footer {

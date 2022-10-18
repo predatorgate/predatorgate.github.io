@@ -42,3 +42,25 @@ with open('template.html') as f:
 
 with open('index.html', 'w') as f:
     f.write(template.replace('{{main_body}}', html_body))
+
+
+html_node_template = '''
+        <h3>{{name}}</h3>
+        <p class="people-item">
+            {{description}}
+        </p>
+'''
+
+html_body = ''
+people = []
+with open('people.csv') as f:
+    reader = csv.reader(f)
+    for idx, row in enumerate(reader):
+        if idx > 0:
+            html_body += html_node_template.replace('{{name}}', row[0]).replace('{{description}}', row[1])
+
+with open('template_people.html') as f:
+    template = f.read()
+
+with open('people.html', 'w') as f:
+    f.write(template.replace('{{main_body}}', html_body))
