@@ -29,19 +29,30 @@ with open('data.csv') as f:
                     dates.append(date)
                 events[date].append((event, link))
 
-html_body = ''
-for date in dates:
-    node = '\n <div class="separator">~</div> \n'.join([
-        html_node_template.replace('{{link}}', event[1]).replace('{{description}}', event[0]) for event in events[date]
-    ])
+for reverse in [False, True]:
+    html_body = '''
+        <a href="{}.html">Αντίστροφη Χρονολογική Σειρά</a>
+    '''.format('reverse' if reverse else 'index') 
 
-    html_body += html_date_template.replace('{{date}}', date).replace('{{paragraphs}}', node)
+    if reverse:
+        dates = reversed(dates)
 
-with open('template.html') as f:
-    template = f.read()
+    for date in dates:
+        node = '\n <div class="separator">~</div> \n'.join([
+            html_node_template.replace('{{link}}', event[1]).replace('{{description}}', event[0]) for event in events[date]
+        ])
 
-with open('index.html', 'w') as f:
+        html_body += html_date_template.replace('{{date}}', date).replace('{{paragraphs}}', node)
+
+    with open('template.html') as f:
+        template = f.read()
+
+    if reverse:
+        f = open('index.html', 'w')
+    else:
+        f = open('reverse.html', 'w')
     f.write(template.replace('{{main_body}}', html_body))
+    f.close()
 
 
 html_node_template = '''
