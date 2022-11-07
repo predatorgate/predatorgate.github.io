@@ -55,23 +55,55 @@ for reverse in [False, True]:
     f.close()
 
 
-html_node_template = '''
-        <h3>{{name}}</h3>
+involved_template = '''
+        <h4>{{name}}</h4>
         <p class="people-item">
             {{description}}
         </p>
 '''
-
-html_body = ''
+involved_body = ''
 people = []
 with open('people.csv') as f:
     reader = csv.reader(f)
     for idx, row in enumerate(reader):
         if idx > 0:
-            html_body += html_node_template.replace('{{name}}', row[0]).replace('{{description}}', row[1])
+            involved_body += involved_template.replace('{{name}}', row[0]).replace('{{description}}', row[1])
+
+
+victims_template = '''
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Όνομα</th>
+          <th scope="col">Περιγραφή</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{table_body}}
+      </tbody>
+    </table>
+'''
+
+
+victims_html_node = '''
+        <tr>
+          <td>{{name}}</td>
+          <td>{{description}}</td>
+        </tr>
+'''
+victims_body = ''
+people = []
+with open('victims.csv') as f:
+    reader = csv.reader(f)
+    for idx, row in enumerate(reader):
+        if idx > 0:
+            victims_body += victims_html_node.replace('{{name}}', row[0]).replace('{{description}}', row[1])
+
+victims_body = victims_template.replace('{{table_body}}', victims_body)
+
 
 with open('template_people.html') as f:
     template = f.read()
 
 with open('people.html', 'w') as f:
-    f.write(template.replace('{{main_body}}', html_body))
+    f.write(template.replace('{{involved}}', involved_body).replace('{{victims}}', victims_body))
