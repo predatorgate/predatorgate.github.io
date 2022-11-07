@@ -55,22 +55,7 @@ for reverse in [False, True]:
     f.close()
 
 
-involved_template = '''
-        <h4>{{name}}</h4>
-        <p class="people-item">
-            {{description}}
-        </p>
-'''
-involved_body = ''
-people = []
-with open('people.csv') as f:
-    reader = csv.reader(f)
-    for idx, row in enumerate(reader):
-        if idx > 0:
-            involved_body += involved_template.replace('{{name}}', row[0]).replace('{{description}}', row[1])
-
-
-victims_template = '''
+table_template = '''
     <table class="table">
       <thead>
         <tr>
@@ -84,22 +69,31 @@ victims_template = '''
     </table>
 '''
 
-
-victims_html_node = '''
+table_node = '''
         <tr>
           <td>{{name}}</td>
           <td>{{description}}</td>
         </tr>
 '''
+
+involved_body = ''
+people = []
+with open('people.csv') as f:
+    reader = csv.reader(f)
+    for idx, row in enumerate(reader):
+        if idx > 0:
+            involved_body += table_node.replace('{{name}}', row[0]).replace('{{description}}', row[1])
+involved_body = table_template.replace('{{table_body}}', involved_body)
+
 victims_body = ''
 people = []
 with open('victims.csv') as f:
     reader = csv.reader(f)
     for idx, row in enumerate(reader):
         if idx > 0:
-            victims_body += victims_html_node.replace('{{name}}', row[0]).replace('{{description}}', row[1])
+            victims_body += table_node.replace('{{name}}', row[0]).replace('{{description}}', row[1])
 
-victims_body = victims_template.replace('{{table_body}}', victims_body)
+victims_body = table_template.replace('{{table_body}}', victims_body)
 
 
 with open('template_people.html') as f:
