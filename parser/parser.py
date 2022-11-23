@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import csv
+import json
+import requests
+from bs4 import BeautifulSoup
 from collections import defaultdict
 
 html_date_template = '''
@@ -12,9 +15,32 @@ html_date_template = '''
 html_node_template = '''
         <p>
             {{description}}
-            [<a href={{link}} target="_blank">Πηγή</a>]
+            [Πηγές: {{sources}}]
         </p>
 '''
+
+try:
+    with open('sources.json') as f:
+        sources = json.load(f)
+except FileNotFoundError:
+    sources = {}
+    with open('data.csv') as f:
+        reader = csv.reader(f)
+        for idx, row in enumerate(reader):
+            (date, description, url, _) = row
+            if idx > 0:
+                if url:
+                    if 'linkmix.co' not in url:
+                        sources[idx] = [url]
+                    else:
+                        r = requests.get(url)
+                        html = r.text
+                        soup = BeautifulSoup(html, 'html.parser')
+                        sources[idx] = [
+                            node.text for node in soup.find_all('div', {'class': 'mainURL'})
+                        ]
+    with open('sources.json', 'w') as f:
+        f.write(json.dumps(sources, indent=4))
 
 dates = []
 events = defaultdict(list)
@@ -22,12 +48,15 @@ with open('data.csv') as f:
     reader = csv.reader(f)
     for idx, row in enumerate(reader):
         if idx > 0:
-            (date, event, link, entry_id) = row
+            (date, event, _, entry_id) = row
             if date:
+                links = ', '.join([
+                    '<a href="{}" target="_blank">{}</a>'.format(val, i+1) for (i, val) in enumerate(sources[str(idx)])
+                ])
                 date = date.replace('/', '-')
                 if date not in dates:
                     dates.append(date)
-                events[date].append((event, link))
+                events[date].append((event, links))
 
 for reverse in [False, True]:
     html_body = '''
@@ -39,7 +68,7 @@ for reverse in [False, True]:
 
     for date in dates:
         node = '\n <div class="separator">~</div> \n'.join([
-            html_node_template.replace('{{link}}', event[1]).replace('{{description}}', event[0]) for event in events[date]
+            html_node_template.replace('{{sources}}', event[1]).replace('{{description}}', event[0]) for event in events[date]
         ])
 
         html_body += html_date_template.replace('{{date}}', date).replace('{{paragraphs}}', node)
