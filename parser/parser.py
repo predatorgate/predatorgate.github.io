@@ -31,12 +31,12 @@ except FileNotFoundError:
             if idx > 0:
                 if url:
                     if 'linkmix.co' not in url:
-                        sources[idx] = [url]
+                        sources[str(idx)] = [url]
                     else:
                         r = requests.get(url)
                         html = r.text
                         soup = BeautifulSoup(html, 'html.parser')
-                        sources[idx] = [
+                        sources[str(idx)] = [
                             node.text for node in soup.find_all('div', {'class': 'mainURL'})
                         ]
     with open('sources.json', 'w') as f:
