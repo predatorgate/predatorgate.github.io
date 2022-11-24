@@ -6,6 +6,7 @@ import requests
 from bs4 import BeautifulSoup
 from collections import defaultdict
 
+
 html_date_template = '''
     <div class="timeline-item" date-is='{{date}}'>
         {{paragraphs}}
@@ -24,23 +25,6 @@ try:
         sources = json.load(f)
 except FileNotFoundError:
     sources = {}
-    with open('data.csv') as f:
-        reader = csv.reader(f)
-        for idx, row in enumerate(reader):
-            (date, description, url, _) = row
-            if idx > 0:
-                if url:
-                    if 'linkmix.co' not in url:
-                        sources[str(idx)] = [url]
-                    else:
-                        r = requests.get(url)
-                        html = r.text
-                        soup = BeautifulSoup(html, 'html.parser')
-                        sources[str(idx)] = [
-                            node.text for node in soup.find_all('div', {'class': 'mainURL'})
-                        ]
-    with open('sources.json', 'w') as f:
-        f.write(json.dumps(sources, indent=4))
 
 dates = []
 events = defaultdict(list)
@@ -48,7 +32,19 @@ with open('data.csv') as f:
     reader = csv.reader(f)
     for idx, row in enumerate(reader):
         if idx > 0:
-            (date, event, _, entry_id) = row
+            (date, event, url, entry_id) = row
+            if str(idx) not in sources.keys():
+                if 'linkmix.co' not in url:
+                    sources[str(idx)] = [url]
+                else:
+                    r = requests.get(url)
+                    html = r.text
+                    soup = BeautifulSoup(html, 'html.parser')
+                    sources[str(idx)] = [
+                        node.text for node in soup.find_all('div', {'class': 'mainURL'})
+                    ]
+                with open('sources.json', 'w') as f:
+                    f.write(json.dumps(sources, indent=4))
             if date:
                 links = ', '.join([
                     '<a href="{}" target="_blank">{}</a>'.format(val, i+1) for (i, val) in enumerate(sources[str(idx)])
