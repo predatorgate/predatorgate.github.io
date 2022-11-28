@@ -33,7 +33,7 @@ with open('data.csv') as f:
     for idx, row in enumerate(reader):
         if idx > 0:
             (date, event, url, entry_id) = row
-            if str(idx) not in sources.keys():
+            if str(idx) not in sources.keys() and url:
                 if 'linkmix.co' not in url:
                     sources[str(idx)] = [url]
                 else:
