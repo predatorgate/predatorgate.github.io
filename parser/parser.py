@@ -34,6 +34,7 @@ with open('data.csv') as f:
         if idx > 0:
             (date, event, url, entry_id) = row
             if str(idx) not in sources.keys() and url:
+                print('[*] Getting source for', date)
                 if 'linkmix.co' not in url:
                     sources[str(idx)] = [url]
                 else:
