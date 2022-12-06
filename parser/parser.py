@@ -50,7 +50,11 @@ with open('data.csv') as f:
                 links = ', '.join([
                     '<a href="{}" target="_blank">{}</a>'.format(val, i+1) for (i, val) in enumerate(sources[str(idx)])
                 ])
-                date = date.replace('/', '-')
+
+                day, month, year = date.strip().split('/')
+                day = day.zfill(2)
+                month = month.zfill(2)
+                date = '-'.join([day, month, year])
                 if date not in dates:
                     dates.append(date)
                 events[date].append((event, links))
