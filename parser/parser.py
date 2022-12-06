@@ -110,13 +110,37 @@ with open('people.csv') as f:
             involved_body += table_node.replace('{{name}}', row[0]).replace('{{description}}', row[1])
 involved_body = table_template.replace('{{table_body}}', involved_body)
 
+
+table_template = '''
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Όνομα</th>
+          <th scope="col">Περιγραφή</th>
+          <th scope="col">Μέθοδος</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{table_body}}
+      </tbody>
+    </table>
+'''
+
+table_node = '''
+        <tr>
+          <td>{{name}}</td>
+          <td>{{description}}</td>
+          <td>{{method}}</td>
+        </tr>
+'''
+
 victims_body = ''
 people = []
 with open('victims.csv') as f:
     reader = csv.reader(f)
     for idx, row in enumerate(reader):
         if idx > 0:
-            victims_body += table_node.replace('{{name}}', row[0]).replace('{{description}}', row[1])
+            victims_body += table_node.replace('{{name}}', row[0]).replace('{{description}}', row[1]).replace('{{method}}', row[2])
 
 victims_body = table_template.replace('{{table_body}}', victims_body)
 
