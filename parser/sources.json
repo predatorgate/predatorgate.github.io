@@ -58,7 +58,7 @@
         "https://www.reportersunited.gr/8646/eyp-koukakis/"
     ],
     "16": [
-        "https://insidestory.gr/article/elliniko-dimosio-kai-intellexa-ki-omos-gnorizontai"
+        "https://insidestory.gr/article/elliniko-dimosio-kai-Intellexa-ki-omos-gnorizontai"
     ],
     "17": [
         "https://www.reportersunited.gr/8646/eyp-koukakis/"
@@ -593,7 +593,7 @@
         "https://www.youtube.com/watch?v=5VySTM2-ly0"
     ],
     "167": [
-        "https://insidestory.gr/article/elliniko-dimosio-kai-intellexa-ki-omos-gnorizontai"
+        "https://insidestory.gr/article/elliniko-dimosio-kai-Intellexa-ki-omos-gnorizontai"
     ],
     "168": [
         "https://www.kathimerini.gr/politics/562138606/parakoloythiseis-se-diavoyleysi-to-schedio-nomoy-ti-provlepei/",
@@ -705,7 +705,8 @@
     ],
     "199": [
         "https://www.hellenicparliament.gr/Vouli-ton-Ellinon/ToKtirio/Fotografiko-Archeio/#25e44596-45ec-453e-ae08-af6200dd0d07",
-        "https://www.news247.gr/politiki/voyli-kolafos-oi-anexartites-arches-gia-to-nomoschedio-ton-parakoloythiseon.9859409.html"
+        "https://www.news247.gr/politiki/voyli-kolafos-oi-anexartites-arches-gia-to-nomoschedio-ton-parakoloythiseon.9859409.html",
+        "https://www.efsyn.gr/ellada/dikaiosyni/369868_diapseydei-i-ende-ta-senaria-peri-apodohis-parakoloythisis-tis-ptd"
     ],
     "200": [
         "https://www.efsyn.gr/politiki/boyli/369759_psifistike-epi-tis-arhis-stin-epitropi-mono-apo-ti-nd-n/s-gia-tin-eyp"
@@ -713,5 +714,11 @@
     "201": [
         "https://www.documentonews.gr/article/apokalyptoyme-ton-eniaio-psifiako-egkefalo/",
         "https://www.documentonews.gr/article/eisaggelia-protodikon-aitima-dikastikis-syndromis-stis-hpa-gia-ta-ixni-toy-predator-meta-tis-apokalypseis-toy-documento/"
+    ],
+    "202": [
+        "https://kinimaallagis.gr/prosfygh-nikoy-androylakh-sto-eyrwpaiko-dikasthrio-dikaiwmatwn-toy-anthrwpoy"
+    ],
+    "203": [
+        "https://www.europarl.europa.eu/RegData/etudes/STUD/2022/740151/IPOL_STU(2022)740151_EN.pdf"
     ]
 }
