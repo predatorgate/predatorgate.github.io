@@ -3,6 +3,7 @@
 import csv
 import json
 import requests
+from time import sleep
 from bs4 import BeautifulSoup
 from collections import defaultdict
 
@@ -38,7 +39,14 @@ with open('data.csv') as f:
                 if 'linkmix.co' not in url:
                     sources[str(idx)] = [url]
                 else:
-                    r = requests.get(url)
+                    flag = False
+                    while not flag:
+                        try:
+                            r = requests.get(url)
+                            flag = True
+                        except:
+                            print('Error when collecting page, sleeping')
+                            sleep(5)
                     html = r.text
                     soup = BeautifulSoup(html, 'html.parser')
                     sources[str(idx)] = [
@@ -62,7 +70,7 @@ with open('data.csv') as f:
 for reverse in [False, True]:
     html_body = '''
         <a href="{}.html">Αντίστροφη Χρονολογική Σειρά</a>
-    '''.format('reverse' if reverse else 'index') 
+    '''.format('reverse' if reverse else 'index')
 
     if reverse:
         dates = reversed(dates)
