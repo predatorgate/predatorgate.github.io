@@ -1,8 +1,7 @@
 all:
 	@python3 parser.py
-	mv index.html ..
-	mv reverse.html ..
-	mv people.html ..
+	cp data.csv ../data/timeline.csv
+	cp sources.json people.csv victims.csv ../data/
 
 reset:
 	rm -f sources.json
