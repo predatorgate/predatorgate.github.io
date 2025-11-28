@@ -13,7 +13,7 @@ try:
 except FileNotFoundError:
     sources = {}
 
-with open('data.csv') as f:
+with open('timeline.csv') as f:
     reader = csv.reader(f)
     for idx, row in enumerate(reader):
         if idx > 0:
