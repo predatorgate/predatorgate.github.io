@@ -18,10 +18,11 @@ with open('timeline.csv') as f:
     for idx, row in enumerate(reader):
         if idx > 0:
             (date, event, url, entry_id) = row
-            if str(idx) not in sources.keys() and url:
+            entry_key = str(entry_id)
+            if entry_key not in sources.keys() and url:
                 print('[*] Getting source for', date)
                 if 'linkmix.co' not in url:
-                    sources[str(idx)] = [url]
+                    sources[entry_key] = [url]
                 else:
                     flag = False
                     while not flag:
@@ -33,7 +34,7 @@ with open('timeline.csv') as f:
                             sleep(5)
                     html = r.text
                     soup = BeautifulSoup(html, 'html.parser')
-                    sources[str(idx)] = [
+                    sources[entry_key] = [
                         node.text for node in soup.find_all('div', {'class': 'mainURL'})
                     ]
                 with open('sources.json', 'w') as f:

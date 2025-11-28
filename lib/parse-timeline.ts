@@ -55,6 +55,6 @@ export function enrichWithSources(events: TimelineEvent[], sourcesMap: Record<st
   return events.map((event, index) => ({
     ...event,
     // Map by row index: first event (index 0) corresponds to sources["1"], etc.
-    sources: sourcesMap[String(index + 1)] || [],
+    sources: sourcesMap[event.sortNumber] || [],
   }))
 }
