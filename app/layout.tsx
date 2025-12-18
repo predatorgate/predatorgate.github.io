@@ -1,7 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import Script from "next/script";
 
@@ -44,7 +43,6 @@ export default function RootLayout({
         </Script>
 
         {children}
-        <Analytics />
       </body>
     </html>
   )
