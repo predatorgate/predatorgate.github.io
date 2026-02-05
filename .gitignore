@@ -1,2 +1,7 @@
 *.swp
 *.pyc
+.env
+.env.local
+node_modules/
+.next/
+next-env.d.ts
