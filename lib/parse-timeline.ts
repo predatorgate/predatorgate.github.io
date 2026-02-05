@@ -21,6 +21,11 @@ export function parseCSV(csvContent: string): TimelineEvent[] {
   const lines = csvContent.split("\n")
   const events: TimelineEvent[] = []
 
+  // Detect whether the CSV has an Entry ID column (5 columns = English)
+  // by checking the header row.
+  const header = lines[0] || ""
+  const hasEntryIdColumn = header.toLowerCase().includes("entry id")
+
   // Skip header row
   for (let i = 1; i < lines.length; i++) {
     const line = lines[i].trim()
@@ -49,13 +54,17 @@ export function parseCSV(csvContent: string): TimelineEvent[] {
       const date = fields[0].trim()
       if (!date) continue
 
-      const description = fields[1]
+      // English CSV: read the hash from column 5.
+      // Greek CSV: compute the hash from the Greek date + description.
+      const entryId = hasEntryIdColumn && fields.length >= 5
+        ? fields[4].trim()
+        : makeEntryId(fields[0], fields[1])
 
       events.push({
         date: fields[0],
-        description,
+        description: fields[1],
         link: fields[2],
-        entryId: makeEntryId(fields[0], description),
+        entryId,
         sources: [],
       })
     }
