@@ -1,9 +1,20 @@
+import { createHash } from "crypto"
+
 export interface TimelineEvent {
   date: string
   description: string
   link: string
-  sortNumber: string
+  entryId: string
   sources: string[]
+}
+
+/**
+ * Generate a stable 8-char hex ID from date + description.
+ * Must match the Python make_entry_id() function exactly.
+ */
+function makeEntryId(date: string, description: string): string {
+  const raw = `${date}|${description}`
+  return createHash("sha256").update(raw, "utf-8").digest("hex").slice(0, 8)
 }
 
 export function parseCSV(csvContent: string): TimelineEvent[] {
@@ -34,15 +45,17 @@ export function parseCSV(csvContent: string): TimelineEvent[] {
     }
     fields.push(currentField) // Add last field
 
-    if (fields.length >= 4) {
+    if (fields.length >= 3) {
       const date = fields[0].trim()
       if (!date) continue
 
+      const description = fields[1]
+
       events.push({
         date: fields[0],
-        description: fields[1],
+        description,
         link: fields[2],
-        sortNumber: fields[3],
+        entryId: makeEntryId(fields[0], description),
         sources: [],
       })
     }
@@ -52,9 +65,8 @@ export function parseCSV(csvContent: string): TimelineEvent[] {
 }
 
 export function enrichWithSources(events: TimelineEvent[], sourcesMap: Record<string, string[]>): TimelineEvent[] {
-  return events.map((event, index) => ({
+  return events.map((event) => ({
     ...event,
-    // Map by row index: first event (index 0) corresponds to sources["1"], etc.
-    sources: sourcesMap[event.sortNumber] || [],
+    sources: sourcesMap[event.entryId] || [],
   }))
 }
