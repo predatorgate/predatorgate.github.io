@@ -31,7 +31,7 @@ export function parseCSV(csvContent: string): TimelineEvent[] {
     const line = lines[i].trim()
     if (!line) continue
 
-    // Parse CSV line handling quoted fields with commas
+    // Parse CSV line handling quoted fields with commas and escaped quotes
     const fields: string[] = []
     let currentField = ""
     let inQuotes = false
@@ -40,7 +40,14 @@ export function parseCSV(csvContent: string): TimelineEvent[] {
       const char = line[j]
 
       if (char === '"') {
-        inQuotes = !inQuotes
+        if (inQuotes && line[j + 1] === '"') {
+          // Escaped quote ("") -> literal quote
+          currentField += '"'
+          j++ // skip the next quote
+        } else {
+          // Toggle quote state (start or end of quoted field)
+          inQuotes = !inQuotes
+        }
       } else if (char === "," && !inQuotes) {
         fields.push(currentField)
         currentField = ""
