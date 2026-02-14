@@ -125,6 +125,24 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               >
                 v0 by Vercel
               </a>
+              . {t.footer.translatedBy}{" "}
+              <a
+                href="https://claude.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Claude AI
+              </a>
+              . {t.footer.copyright}{" "}
+              <a
+                href="https://creativecommons.org/licenses/by/4.0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Creative Commons Attribution 4.0 International License
+              </a>
               .
             </p>
             <div className="flex justify-center gap-6 text-sm">

@@ -46,6 +46,8 @@ const translations = {
       githubText: "Μπορείτε να συνεισφέρετε στην ανάπτυξη της σελίδας στο",
       contactText: "Επικοινωνία στο",
       builtWith: "Αναπτύχθηκε με",
+      translatedBy: "Μεταφράστηκε από τα ελληνικά με",
+      copyright: "Το περιεχόμενο της σελίδας είναι αδειοδοτημένο με",
     },
 
     // Language switcher
@@ -93,6 +95,8 @@ const translations = {
       githubText: "You can contribute to the development of the site on",
       contactText: "Contact us at",
       builtWith: "Built with",
+      translatedBy: "Translated from Greek with",
+      copyright: "This work is licensed under a",
     },
 
     // Language switcher
