@@ -37,6 +37,10 @@ const translations = {
       mainPeopleSubtitle: "Πρόσωπα και οργανισμοί που σχετίζονται με το σκάνδαλο",
       victimsTitle: "Θύματα Παρακολουθήσεων",
       victimsSubtitle: "Άτομα που στοχοποιήθηκαν μέσω του λογισμικού Predator ή της ΕΥΠ",
+      filterAll: "Όλα",
+      filterPredator: "Μόνο Predator",
+      filterEyp: "Μόνο ΕΥΠ",
+      filterBoth: "Predator & ΕΥΠ",
     },
 
     // Footer
@@ -86,6 +90,10 @@ const translations = {
       mainPeopleSubtitle: "People and organizations linked to the scandal",
       victimsTitle: "Surveillance Victims",
       victimsSubtitle: "Individuals targeted through the Predator spyware or the Greek Intelligence Service (EYP)",
+      filterAll: "All",
+      filterPredator: "Predator only",
+      filterEyp: "EYP only",
+      filterBoth: "Predator & EYP",
     },
 
     // Footer

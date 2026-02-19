@@ -6,6 +6,7 @@ import { parsePeopleCSV, parseVictimsCSV } from "@/lib/parse-people"
 import { isValidLocale, defaultLocale, getTranslations } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import { VictimsFilter } from "@/components/victims-filter"
 
 export default async function PeoplePage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
@@ -97,30 +98,16 @@ export default async function PeoplePage({ params }: { params: Promise<{ lang: s
                 <h3 className="text-3xl font-serif font-bold text-primary">{t.people.victimsTitle}</h3>
                 <p className="text-muted-foreground">{t.people.victimsSubtitle}</p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {victims.map((victim, idx) => (
-                  <Card key={idx} className="p-6 hover:border-primary/50 transition-colors">
-                    <div className="space-y-3">
-                      <div className="flex items-start justify-between gap-4">
-                        <h4 className="text-lg font-bold">{victim.name}</h4>
-                        <div className="flex gap-2">
-                          {victim.method.includes("Predator") && (
-                            <span className="text-xs uppercase tracking-wider bg-red-100 text-red-700 px-3 py-1 rounded-full font-semibold whitespace-nowrap">
-                              Predator
-                            </span>
-                          )}
-                          {(victim.method.includes("ΕΥΠ") || victim.method.includes("EYP")) && (
-                            <span className="text-xs uppercase tracking-wider bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-semibold whitespace-nowrap">
-                              {eypLabel}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{victim.description}</p>
-                    </div>
-                  </Card>
-                ))}
-              </div>
+              <VictimsFilter
+                victims={victims}
+                eypLabel={eypLabel}
+                labels={{
+                  all: t.people.filterAll,
+                  predatorOnly: t.people.filterPredator,
+                  eypOnly: t.people.filterEyp,
+                  both: t.people.filterBoth,
+                }}
+              />
             </div>
           </div>
         </div>
