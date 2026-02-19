@@ -41,6 +41,7 @@ const translations = {
       filterPredator: "Μόνο Predator",
       filterEyp: "Μόνο ΕΥΠ",
       filterBoth: "Predator & ΕΥΠ",
+      filterSource: "πηγή",
     },
 
     // Footer
@@ -94,6 +95,7 @@ const translations = {
       filterPredator: "Predator only",
       filterEyp: "EYP only",
       filterBoth: "Predator & EYP",
+      filterSource: "source",
     },
 
     // Footer

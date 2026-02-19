@@ -1,0 +1,780 @@
+{
+  "source_definitions": {
+    "apdpx_insidestory": {
+      "label": {
+        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα",
+        "en": "Hellenic Data Protection Authority (APDPX)"
+      },
+      "url": "https://insidestory.gr/article/aytoi-einai-oi-koinoi-stohoi-eyp-kai-predator",
+      "method": "both"
+    },
+    "apdpx_insidestory_predator": {
+      "label": {
+        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα",
+        "en": "Hellenic Data Protection Authority (APDPX)"
+      },
+      "url": "https://insidestory.gr/article/aytoi-einai-oi-koinoi-stohoi-eyp-kai-predator",
+      "method": "predator"
+    },
+    "apdpx_insidestory_sms": {
+      "label": {
+        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα",
+        "en": "Hellenic Data Protection Authority (APDPX)"
+      },
+      "url": "https://insidestory.gr/article/predatorgate-ti-egrafan-ta-sms-pagida-poy-elavan-epiheirimaties-ypoyrgoi-kai-dimosiografoi",
+      "method": "predator"
+    },
+    "adae_eyp": {
+      "label": {
+        "gr": "Αρχή Διατήρησης Απορρήτου Επικοινωνιών",
+        "en": "Authority for Communication Security and Privacy"
+      },
+      "url": "https://www.news247.gr/politiki/alexis-tsipras-ipevale-protasi-dispistias-kata-tis-kivernisis-apokalipse-ta-onomata-ton-stoxon-tis-efp/",
+      "method": "eyp"
+    },
+    "documento_predator": {
+      "label": {
+        "gr": "Documento",
+        "en": "Documento"
+      },
+      "url": "https://www.documentonews.gr/article/o-ypoyrgos-xatzidakis-sti-lista-tis-eyp-kai-toy-predator/",
+      "method": "predator"
+    },
+    "documento_eyp": {
+      "label": {
+        "gr": "Documento",
+        "en": "Documento"
+      },
+      "url": "https://www.documentonews.gr/article/o-ypoyrgos-xatzidakis-sti-lista-tis-eyp-kai-toy-predator/",
+      "method": "eyp"
+    },
+    "documento_1": {
+      "label": {
+        "gr": "Documento",
+        "en": "Documento"
+      },
+      "url": "https://www.documentonews.gr/article/poioys-kai-giati-akoyge-to-systima-mitsotaki/#.Y2imYSVGLxI.twitter",
+      "method": "predator"
+    },
+    "documento_2": {
+      "label": {
+        "gr": "Documento",
+        "en": "Documento"
+      },
+      "url": "https://www.documentonews.gr/article/oi-dikoi-toy-anthropoi-ston-kyklo-tis-parakoloythisis/",
+      "method": "predator"
+    },
+    "documento_3": {
+      "label": {
+        "gr": "Documento",
+        "en": "Documento"
+      },
+      "url": "https://www.documentonews.gr/article/parakoloythoyse-ton-arxigo-tis-astynomias-eisaggeleis-kai-ypoyrgoys/",
+      "method": "predator"
+    },
+    "documento_4": {
+      "label": {
+        "gr": "Documento",
+        "en": "Documento"
+      },
+      "url": "https://www.documentonews.gr/article/h-nea-lista-parakoloythoymenon-apo-tin-eyp/",
+      "method": "eyp"
+    },
+    "apdpx_insidestory_kosmidis": {
+      "label": {
+        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα",
+        "en": "Hellenic Data Protection Authority (APDPX)"
+      },
+      "url": "https://insidestory.gr/article/sygkalypsi-predatorgate-o-krisimos-martyras-poy-den-klithike-pote-na-katathesei",
+      "method": "predator"
+    }
+  },
+  "victims": {
+    "gr": {
+      "Τάσος Καραμήτσος": [
+        "apdpx_insidestory_predator"
+      ],
+      "Τάκης Θεοδωρικάκος": [
+        "apdpx_insidestory_predator"
+      ],
+      "Μανώλης Γραφάκος": [
+        "apdpx_insidestory"
+      ],
+      "Γιώργος Μυλωνάκης": [
+        "apdpx_insidestory"
+      ],
+      "Θανάσης Κουκάκης": [
+        "apdpx_insidestory"
+      ],
+      "Χρήστος Μπαρδάκης": [
+        "apdpx_insidestory"
+      ],
+      "Τίνα Μεσσαροπούλου": [
+        "apdpx_insidestory"
+      ],
+      "Γιάννης Ολύμπιος": [
+        "apdpx_insidestory"
+      ],
+      "Θοδωρής Λάγιος": [
+        "adae_eyp"
+      ],
+      "Ολγα Γεροβασίλη": [
+        "documento_1"
+      ],
+      "Βασίλης Κικίλιας": [
+        "documento_1"
+      ],
+      "Χαράλαµπος Λαλούσης": [
+        "adae_eyp"
+      ],
+      "Μιλτιάδης Βαρβιτσιώτης": [
+        "documento_2"
+      ],
+      "Θωμάς Βαρβιτσιώτης": [
+        "apdpx_insidestory"
+      ],
+      "Αργυρώ Ξαγοράρη": [
+        "apdpx_insidestory"
+      ],
+      "Κωστής Χατζηδάκης": [
+        "apdpx_insidestory"
+      ],
+      "Νίκος Σιγάλας": [
+        "apdpx_insidestory"
+      ],
+      "Κωστής Μουσουρούλης": [
+        "apdpx_insidestory"
+      ],
+      "Αριστείδης Αλεξόπουλος": [
+        "apdpx_insidestory"
+      ],
+      "Λάκης Λαζόπουλος": [
+        "apdpx_insidestory"
+      ],
+      "Στέφανος Χίος": [
+        "apdpx_insidestory"
+      ],
+      "Φωτεινή Ιωάννου": [
+        "apdpx_insidestory"
+      ],
+      "Πηνελόπη Μηνιάτη": [
+        "apdpx_insidestory"
+      ],
+      "Τόνια Πρίμπα": [
+        "apdpx_insidestory"
+      ],
+      "Γιάννης Φυτίλης": [
+        "apdpx_insidestory"
+      ],
+      "Άρτεμις Σίφορντ": [
+        "apdpx_insidestory"
+      ],
+      "Μαίη Ζαννή": [
+        "apdpx_insidestory"
+      ],
+      "Γιάννης Ζερβάκης": [
+        "documento_4"
+      ],
+      "Γιώργος Τράγκας": [
+        "documento_4"
+      ],
+      "Αρης Σπίνος": [
+        "documento_4"
+      ],
+      "Γιώργος Φιλιόπουλος": [
+        "documento_4"
+      ],
+      "Μιχάλης Οικονοµάκης": [
+        "documento_4"
+      ],
+      "Παναγιώτης Κανελλόπουλος": [
+        "documento_4"
+      ],
+      "Εύα Καϊλή": [
+        "documento_4"
+      ],
+      "Ελίνα Κυπραίου": [
+        "documento_2"
+      ],
+      "Γκρατσιέλα Κλάδη": [
+        "documento_2"
+      ],
+      "Βασίλης Γκρίζης": [
+        "documento_2"
+      ],
+      "Ολίνκα Βαρβιτσιώτη": [
+        "documento_2"
+      ],
+      "Ειρήνη Εξάρχου": [
+        "documento_2"
+      ],
+      "Ορσάκη Ρουσσέτου": [
+        "documento_2"
+      ],
+      "Αμφιλόχιος": [
+        "documento_2"
+      ],
+      "Βαγγέλης Πιττερός": [
+        "documento_2"
+      ],
+      "Πέτρος Κουσουλός": [
+        "documento_2"
+      ],
+      "Σπύρος Σιδέρης": [
+        "documento_2"
+      ],
+      "Μαρία Σαράφογλου": [
+        "documento_2"
+      ],
+      "Γιώργος Πατεράκης": [
+        "documento_2"
+      ],
+      "Αγγελική Ρούσσου": [
+        "documento_2"
+      ],
+      "Χρήστος Αγραφιώτης": [
+        "documento_2"
+      ],
+      "Γιάννης Αναστασάκος": [
+        "documento_2"
+      ],
+      "Ευγενία Μανωλίδου": [
+        "documento_1"
+      ],
+      "Χρήστος Σταϊκούρας": [
+        "documento_1"
+      ],
+      "Παναγιώτης Αρκουμανέας": [
+        "documento_1"
+      ],
+      "Λαμπρινή Ρόρη": [
+        "documento_3"
+      ],
+      "Νίκος Μπάμπαλης": [
+        "documento_3"
+      ],
+      "Ροσάννα Μόρτογλου": [
+        "documento_3"
+      ],
+      "Κώστας Τούμπουρος": [
+        "documento_3"
+      ],
+      "Γιώργος Πολίτης": [
+        "documento_3"
+      ],
+      "Δημήτρης Μαζιώτης": [
+        "documento_3"
+      ],
+      "Γιώργος Γεράρδης": [
+        "documento_3"
+      ],
+      "Γρηγόρης Δημητριάδης": [
+        "documento_3"
+      ],
+      "Νανά Παλαιτσάκη": [
+        "documento_3"
+      ],
+      "Παρασκευή (Βιβή) Παπουτσάκη": [
+        "documento_3"
+      ],
+      "Μερόπη Κομνηνού": [
+        "documento_3"
+      ],
+      "Λία Αθανασίου": [
+        "documento_3"
+      ],
+      "Απόστολος Παυλίδης": [
+        "documento_3"
+      ],
+      "Γιάννης Θεοδωράτος": [
+        "documento_3"
+      ],
+      "Αλεξάνδρα Σδούκου": [
+        "documento_3"
+      ],
+      "Βασίλης Ανδρικόπουλος": [
+        "documento_3"
+      ],
+      "Γιώργος Σταμαδιάνος": [
+        "documento_3"
+      ],
+      "Γιάννης Οικονόμου": [
+        "documento_3"
+      ],
+      "Νίκη Κεραμέως": [
+        "documento_3"
+      ],
+      "Βασιλική Βλάχου": [
+        "documento_3"
+      ],
+      "Μιχάλης Καραμαλάκης": [
+        "documento_3"
+      ],
+      "Αντώνης Δελλατόλας": [
+        "documento_1"
+      ],
+      "Γιάννης Ραχωβίτσας": [
+        "documento_1"
+      ],
+      "Εύα Αντωνοπούλου": [
+        "documento_1"
+      ],
+      "Πάνος Κυριακόπουλος": [
+        "documento_1"
+      ],
+      "Ειρήνη Καρυπίδη": [
+        "documento_1"
+      ],
+      "Μαρίνα Πατούλη": [
+        "documento_1"
+      ],
+      "Αριστοτελία Πελώνη": [
+        "documento_1"
+      ],
+      "Πόπη Καλαϊτζή": [
+        "documento_1"
+      ],
+      "Νίκος Χαρδαλιάς": [
+        "documento_1"
+      ],
+      "Ολγα Κεφαλογιάννη": [
+        "documento_1"
+      ],
+      "Τζένη Μπαλατσινού": [
+        "documento_1"
+      ],
+      "Σπύρος Καρανικόλας": [
+        "documento_2"
+      ],
+      "Χάρις Κούτση": [
+        "documento_2"
+      ],
+      "Νίκος Παπαθανάσης": [
+        "documento_2"
+      ],
+      "Ακης Σκέρτσος": [
+        "documento_2"
+      ],
+      "Νίκος Ανδρουλάκης": [
+        "apdpx_insidestory"
+      ],
+      "Γιάννης Κουρτάκης": [
+        "documento_1"
+      ],
+      "Μαρία Διαμαντή": [
+        "apdpx_insidestory"
+      ],
+      "Σπύρος Κουσουνής": [
+        "apdpx_insidestory"
+      ],
+      "Μένιος Φουρθιώτης": [
+        "apdpx_insidestory"
+      ],
+      "Κωνσταντίνος Φλώρος": [
+        "apdpx_insidestory"
+      ],
+      "Μιχάλης Μπεκίρης": [
+        "apdpx_insidestory_sms"
+      ],
+      "Άννα Στρατινάκη": [
+        "apdpx_insidestory_sms"
+      ],
+      "Δημήτρης Αβραμόπουλος": [
+        "apdpx_insidestory_sms"
+      ],
+      "Φίλιππος Βρυώνης": [
+        "apdpx_insidestory_sms"
+      ],
+      "Αλέξης Πατέλης": [
+        "apdpx_insidestory_sms"
+      ],
+      "Τάσος Παπαγεωργίου": [
+        "apdpx_insidestory_sms"
+      ],
+      "Γιώργος Πατούλης": [
+        "apdpx_insidestory_sms"
+      ],
+      "Γιώργος Γεραπετρίτης": [
+        "apdpx_insidestory_sms"
+      ],
+      "Μιχάλης Χρυσοχοΐδης": [
+        "apdpx_insidestory_sms"
+      ],
+      "Αδωνης Γεωργιάδης": [
+        "apdpx_insidestory_sms"
+      ],
+      "Νίκος Δένδιας": [
+        "apdpx_insidestory_sms"
+      ],
+      "Θόδωρος Καρυπίδης": [
+        "apdpx_insidestory_sms"
+      ],
+      "Αλέξης Παπαχελάς": [
+        "apdpx_insidestory_sms",
+        "documento_eyp"
+      ],
+      "Γιώργος Κύρτσος": [
+        "documento_eyp"
+      ],
+      "Αλέξανδρος Διακόπουλος": [
+        "adae_eyp",
+        "documento_predator"
+      ],
+      "Χρήστος Σπίρτζης": [
+        "apdpx_insidestory_sms"
+      ],
+      "Αντώνης Σαμαράς": [
+        "apdpx_insidestory_kosmidis"
+      ],
+      "Ανδρέας Λοβέρδος": [
+        "apdpx_insidestory_kosmidis"
+      ],
+      "Παναγιώτης Μπόμης": [
+        "apdpx_insidestory_kosmidis"
+      ]
+    },
+    "en": {
+      "Thanasis Koukakis": [
+        "apdpx_insidestory"
+      ],
+      "Giorgos Mylonakis": [
+        "apdpx_insidestory"
+      ],
+      "Vangelis Pitteros": [
+        "documento_2"
+      ],
+      "Christos Bardakis": [
+        "apdpx_insidestory"
+      ],
+      "Petros Kousoulos": [
+        "documento_2"
+      ],
+      "Vasilis Gkrizis": [
+        "documento_2"
+      ],
+      "Spyros Sideris": [
+        "documento_2"
+      ],
+      "Tina Messaropoulou": [
+        "apdpx_insidestory"
+      ],
+      "Maria Sarafoglou": [
+        "documento_2"
+      ],
+      "Olinka Varvitsiotis": [
+        "documento_2"
+      ],
+      "Panos Kyriakopoulos": [
+        "documento_1"
+      ],
+      "Eva Antonopoulou": [
+        "documento_1"
+      ],
+      "Giannis Kourtakis": [
+        "documento_1"
+      ],
+      "Olga Gerovasili": [
+        "documento_1"
+      ],
+      "Giannis Rachovitsas": [
+        "documento_1"
+      ],
+      "Antonis Dellatolas": [
+        "documento_1"
+      ],
+      "Giorgos Paterakis": [
+        "documento_2"
+      ],
+      "Eva Kaili": [
+        "documento_4"
+      ],
+      "Panagiotis Kanellopoulos": [
+        "documento_4"
+      ],
+      "Michalis Oikonomakis": [
+        "documento_4"
+      ],
+      "Giorgos Filiopoulos": [
+        "documento_4"
+      ],
+      "Aris Spinos": [
+        "documento_4"
+      ],
+      "Giorgos Tragkas": [
+        "documento_4"
+      ],
+      "Giannis Zervakis": [
+        "documento_4"
+      ],
+      "Giannis Olympios": [
+        "apdpx_insidestory"
+      ],
+      "Michalis Karamalakis": [
+        "documento_3"
+      ],
+      "Vasiliki Vlachou": [
+        "documento_3"
+      ],
+      "Niki Kerameus": [
+        "documento_3"
+      ],
+      "Giannis Oikonomou": [
+        "documento_3"
+      ],
+      "Giorgos Stamadianos": [
+        "documento_3"
+      ],
+      "Vasilis Andrikopoulos": [
+        "documento_3"
+      ],
+      "Alexandra Sdoukou": [
+        "documento_3"
+      ],
+      "Giannis Theodoratos": [
+        "documento_3"
+      ],
+      "Apostolos Pavlidis": [
+        "documento_3"
+      ],
+      "Lia Athanasiou": [
+        "documento_3"
+      ],
+      "Meropi Komninou": [
+        "documento_3"
+      ],
+      "Vasilis Kikilias": [
+        "documento_1"
+      ],
+      "Eugenia Manolidou": [
+        "documento_1"
+      ],
+      "Nana Palaitsaki": [
+        "documento_3"
+      ],
+      "Paraskevi (Vivi) Papoutsakis": [
+        "documento_3"
+      ],
+      "Grigoris Dimitriadis": [
+        "documento_3"
+      ],
+      "Giorgos Gerardis": [
+        "documento_3"
+      ],
+      "Dimitris Maziotis": [
+        "documento_3"
+      ],
+      "Giorgos Politis": [
+        "documento_3"
+      ],
+      "Nikos Babalis": [
+        "documento_3"
+      ],
+      "Rosanna Mortoglou": [
+        "documento_3"
+      ],
+      "Kostas Toumbouros": [
+        "documento_3"
+      ],
+      "Lamprini Rori": [
+        "documento_3"
+      ],
+      "Angeliki Roussou": [
+        "documento_2"
+      ],
+      "Eirini Karypidi": [
+        "documento_1"
+      ],
+      "Eirini Exarchou": [
+        "documento_2"
+      ],
+      "Orsaki Roussetou": [
+        "documento_2"
+      ],
+      "Charis Koutsi": [
+        "documento_2"
+      ],
+      "Gratsiela Kladi": [
+        "documento_2"
+      ],
+      "Spyros Karanikolas": [
+        "documento_2"
+      ],
+      "Amphilochios": [
+        "documento_2"
+      ],
+      "Nikos Papathanasis": [
+        "documento_2"
+      ],
+      "Christos Agrafiotis": [
+        "documento_2"
+      ],
+      "Elina Kypraiou": [
+        "documento_2"
+      ],
+      "Akis Skertsos": [
+        "documento_2"
+      ],
+      "Popi Kalaitzi": [
+        "documento_1"
+      ],
+      "Aristotelia Peloni": [
+        "documento_1"
+      ],
+      "Marina Patouli": [
+        "documento_1"
+      ],
+      "Panagiotis Arkoumaneas": [
+        "documento_1"
+      ],
+      "Giannis Anastasakos": [
+        "documento_2"
+      ],
+      "Miltiadis Varvitsiotis": [
+        "documento_2"
+      ],
+      "Thomas Varvitsiotis": [
+        "apdpx_insidestory"
+      ],
+      "Argyro Xagorari": [
+        "apdpx_insidestory"
+      ],
+      "Kostis Hatzidakis": [
+        "apdpx_insidestory"
+      ],
+      "Nikos Sigalas": [
+        "apdpx_insidestory"
+      ],
+      "Kostis Mousouroulis": [
+        "apdpx_insidestory"
+      ],
+      "Aristeidis Alexopoulos": [
+        "apdpx_insidestory"
+      ],
+      "Lakis Lazopoulos": [
+        "apdpx_insidestory"
+      ],
+      "Stefanos Chios": [
+        "apdpx_insidestory"
+      ],
+      "Foteini Ioannou": [
+        "apdpx_insidestory"
+      ],
+      "Pinelopi Miniati": [
+        "apdpx_insidestory"
+      ],
+      "Tonia Primba": [
+        "apdpx_insidestory"
+      ],
+      "Giannis Fytilis": [
+        "apdpx_insidestory"
+      ],
+      "Artemis Seaford": [
+        "apdpx_insidestory"
+      ],
+      "Jenny Balatsinou": [
+        "documento_1"
+      ],
+      "Olga Kefalogianni": [
+        "documento_1"
+      ],
+      "Nikos Chardalias": [
+        "documento_1"
+      ],
+      "Christos Staikouras": [
+        "documento_1"
+      ],
+      "Mai Zanni": [
+        "apdpx_insidestory"
+      ],
+      "Nikos Androulakis": [
+        "apdpx_insidestory"
+      ],
+      "Maria Diamanti": [
+        "apdpx_insidestory"
+      ],
+      "Spyros Kousounis": [
+        "apdpx_insidestory"
+      ],
+      "Menios Fourthiotis": [
+        "apdpx_insidestory"
+      ],
+      "Konstantinos Floros": [
+        "apdpx_insidestory"
+      ],
+      "Manolis Grafakos": [
+        "apdpx_insidestory"
+      ],
+      "Michalis Bekiris": [
+        "apdpx_insidestory_sms"
+      ],
+      "Anna Stratinaki": [
+        "apdpx_insidestory_sms"
+      ],
+      "Dimitris Avramopoulos": [
+        "apdpx_insidestory_sms"
+      ],
+      "Filippos Vryonis": [
+        "apdpx_insidestory_sms"
+      ],
+      "Alexis Patelis": [
+        "apdpx_insidestory_sms"
+      ],
+      "Tasos Papageorgiou": [
+        "apdpx_insidestory_sms"
+      ],
+      "Giorgos Patoulis": [
+        "apdpx_insidestory_sms"
+      ],
+      "Giorgos Gerapetritis": [
+        "apdpx_insidestory_sms"
+      ],
+      "Michalis Chrysochoidis": [
+        "apdpx_insidestory_sms"
+      ],
+      "Adonis Georgiadis": [
+        "apdpx_insidestory_sms"
+      ],
+      "Nikos Dendias": [
+        "apdpx_insidestory_sms"
+      ],
+      "Thodoris Karypidis": [
+        "apdpx_insidestory_sms"
+      ],
+      "Alexis Papachelas": [
+        "apdpx_insidestory_sms",
+        "documento_eyp"
+      ],
+      "Alexandros Diakopoulos": [
+        "adae_eyp",
+        "documento_predator"
+      ],
+      "Thodoris Lagios": [
+        "adae_eyp"
+      ],
+      "Charalampos Lalousis": [
+        "adae_eyp"
+      ],
+      "Giorgos Kyrtsos": [
+        "documento_eyp"
+      ],
+      "Takis Theodorikakos": [
+        "apdpx_insidestory_predator"
+      ],
+      "Tasos Karamitsos": [
+        "apdpx_insidestory_predator"
+      ],
+      "Christos Spirtzis": [
+        "apdpx_insidestory_sms"
+      ],
+      "Antonis Samaras": [
+        "apdpx_insidestory_kosmidis"
+      ],
+      "Andreas Loverdos": [
+        "apdpx_insidestory_kosmidis"
+      ],
+      "Panagiotis Bomis": [
+        "apdpx_insidestory_kosmidis"
+      ]
+    }
+  }
+}

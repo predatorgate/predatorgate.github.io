@@ -2,7 +2,8 @@ import Link from "next/link"
 import { Card } from "@/components/ui/card"
 import { promises as fs } from "fs"
 import path from "path"
-import { parsePeopleCSV, parseVictimsCSV } from "@/lib/parse-people"
+import { parsePeopleCSV, parseVictimsCSV, enrichVictimsWithSources, enrichVictimsWithCategories, getCategoryList } from "@/lib/parse-people"
+import type { VictimSourcesData, VictimCategoriesData } from "@/lib/parse-people"
 import { isValidLocale, defaultLocale, getTranslations } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import { LanguageSwitcher } from "@/components/language-switcher"
@@ -37,13 +38,26 @@ export default async function PeoplePage({ params }: { params: Promise<{ lang: s
   const people = parsePeopleCSV(peopleContent)
   const victims = parseVictimsCSV(victimsContent)
 
+  // Load victim sources
+  const victimSourcesPath = path.join(process.cwd(), "data", "victim-sources.json")
+  const victimSourcesContent = await fs.readFile(victimSourcesPath, "utf-8")
+  const victimSourcesData: VictimSourcesData = JSON.parse(victimSourcesContent)
+  const enrichedVictims = enrichVictimsWithSources(victims, victimSourcesData, locale)
+
+  // Load victim categories
+  const victimCategoriesPath = path.join(process.cwd(), "data", "victim-categories.json")
+  const victimCategoriesContent = await fs.readFile(victimCategoriesPath, "utf-8")
+  const victimCategoriesData: VictimCategoriesData = JSON.parse(victimCategoriesContent)
+  const categorizedVictims = enrichVictimsWithCategories(enrichedVictims, victimCategoriesData, locale)
+  const categoryList = getCategoryList(victimCategoriesData, locale)
+
   // For English, show "EYP" instead of "ΕΥΠ" in method badges
   const eypLabel = locale === "en" ? "EYP" : "ΕΥΠ"
 
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="border-b border-border">
+      <header className="border-b border-border sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <Link href={`/${locale}`}>
@@ -99,13 +113,15 @@ export default async function PeoplePage({ params }: { params: Promise<{ lang: s
                 <p className="text-muted-foreground">{t.people.victimsSubtitle}</p>
               </div>
               <VictimsFilter
-                victims={victims}
+                victims={categorizedVictims}
                 eypLabel={eypLabel}
+                categories={categoryList}
                 labels={{
                   all: t.people.filterAll,
                   predatorOnly: t.people.filterPredator,
                   eypOnly: t.people.filterEyp,
                   both: t.people.filterBoth,
+                  source: t.people.filterSource,
                 }}
               />
             </div>

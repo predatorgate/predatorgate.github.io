@@ -37,7 +37,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <header className="border-b border-border">
+      <header className="border-b border-border sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <Link href={`/${locale}`}>
