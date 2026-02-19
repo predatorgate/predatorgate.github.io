@@ -149,7 +149,9 @@
       "Artemis Seaford": "business",
       "Amphilochios": "other",
       "Lamprini Rori": "other",
-      "Gratsiela Kladi": "other"
+      "Gratsiela Kladi": "other",
+      "P. Ζ.": "other",
+      "S. F.": "other"
     },
     "gr": {
       "Νίκος Ανδρουλάκης": "politicians_govt",
@@ -266,7 +268,9 @@
       "Άρτεμις Σίφορντ": "business",
       "Αμφιλόχιος": "other",
       "Λαμπρινή Ρόρη": "other",
-      "Γκρατσιέλα Κλάδη": "other"
+      "Γκρατσιέλα Κλάδη": "other",
+      "Π. Ζ.": "other",
+      "Σ. Φ.": "other"
     }
   }
 }
