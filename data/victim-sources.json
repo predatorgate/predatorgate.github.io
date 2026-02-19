@@ -2,7 +2,7 @@
   "source_definitions": {
     "apdpx_insidestory": {
       "label": {
-        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα",
+        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (ΑΠΔΠΧ)",
         "en": "Hellenic Data Protection Authority (APDPX)"
       },
       "url": "https://insidestory.gr/article/aytoi-einai-oi-koinoi-stohoi-eyp-kai-predator",
@@ -10,15 +10,23 @@
     },
     "apdpx_insidestory_predator": {
       "label": {
-        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα",
+        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (ΑΠΔΠΧ)",
         "en": "Hellenic Data Protection Authority (APDPX)"
       },
       "url": "https://insidestory.gr/article/aytoi-einai-oi-koinoi-stohoi-eyp-kai-predator",
       "method": "predator"
     },
+    "apdpx_insidestory_predator_2": {
+      "label": {
+        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (ΑΠΔΠΧ)",
+        "en": "Hellenic Data Protection Authority (APDPX)"
+      },
+      "url": "https://insidestory.gr/article/apokathilosi-ton-eisaggeleon-ton-ypoklopon",
+      "method": "predator"
+    },
     "apdpx_insidestory_sms": {
       "label": {
-        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα",
+        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (ΑΠΔΠΧ)",
         "en": "Hellenic Data Protection Authority (APDPX)"
       },
       "url": "https://insidestory.gr/article/predatorgate-ti-egrafan-ta-sms-pagida-poy-elavan-epiheirimaties-ypoyrgoi-kai-dimosiografoi",
@@ -26,8 +34,8 @@
     },
     "adae_eyp": {
       "label": {
-        "gr": "Αρχή Διατήρησης Απορρήτου Επικοινωνιών",
-        "en": "Authority for Communication Security and Privacy"
+        "gr": "Αρχή Διατήρησης Απορρήτου Επικοινωνιών (ΑΔΑΕ)",
+        "en": "Authority for Communication Security and Privacy (ADAE)"
       },
       "url": "https://www.news247.gr/politiki/alexis-tsipras-ipevale-protasi-dispistias-kata-tis-kivernisis-apokalipse-ta-onomata-ton-stoxon-tis-efp/",
       "method": "eyp"
@@ -82,7 +90,7 @@
     },
     "apdpx_insidestory_kosmidis": {
       "label": {
-        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα",
+        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (ΑΠΔΠΧ)",
         "en": "Hellenic Data Protection Authority (APDPX)"
       },
       "url": "https://insidestory.gr/article/sygkalypsi-predatorgate-o-krisimos-martyras-poy-den-klithike-pote-na-katathesei",
@@ -311,7 +319,7 @@
         "documento_3"
       ],
       "Βασιλική Βλάχου": [
-        "documento_3"
+        "apdpx_insidestory_predator_2"
       ],
       "Μιχάλης Καραμαλάκης": [
         "documento_3"
@@ -525,7 +533,7 @@
         "documento_3"
       ],
       "Vasiliki Vlachou": [
-        "documento_3"
+        "apdpx_insidestory_predator_2"
       ],
       "Niki Kerameus": [
         "documento_3"
