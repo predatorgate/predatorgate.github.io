@@ -58,18 +58,18 @@ export default async function PeoplePage({ params }: { params: Promise<{ lang: s
     <div className="min-h-screen">
       {/* Header */}
       <header className="border-b border-border sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex items-center justify-between">
+        <div className="container mx-auto px-3 py-3 sm:px-4 sm:py-6">
+          <div className="flex items-center justify-between gap-2">
             <Link href={`/${locale}`}>
-              <h1 className="text-2xl font-bold tracking-tight cursor-pointer hover:text-primary transition-colors">
+              <h1 className="text-lg sm:text-2xl font-bold tracking-tight cursor-pointer hover:text-primary transition-colors">
                 PREDATORGATE
               </h1>
             </Link>
-            <nav className="flex items-center gap-6">
-              <Link href={`/${locale}`} className="text-sm hover:text-primary transition-colors">
+            <nav className="flex items-center gap-3 sm:gap-6">
+              <Link href={`/${locale}`} className="text-xs sm:text-sm hover:text-primary transition-colors">
                 {t.nav.timeline}
               </Link>
-              <Link href={`/${locale}/people`} className="text-sm text-primary font-semibold">
+              <Link href={`/${locale}/people`} className="text-xs sm:text-sm text-primary font-semibold">
                 {t.nav.people}
               </Link>
               <LanguageSwitcher currentLang={locale} currentPath="/people" />
