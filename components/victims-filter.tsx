@@ -109,6 +109,19 @@ function VictimCard({ victim, eypLabel, sourceLabel }: { victim: Victim; eypLabe
 
 export function VictimsFilter({ victims, eypLabel, categories, labels }: VictimsFilterProps) {
   const [filter, setFilter] = useState<FilterValue>("all")
+  const [openSections, setOpenSections] = useState<Set<string>>(() => new Set())
+
+  function toggleSection(key: string) {
+    setOpenSections((prev) => {
+      const next = new Set(prev)
+      if (next.has(key)) {
+        next.delete(key)
+      } else {
+        next.add(key)
+      }
+      return next
+    })
+  }
 
   const filtered = victims.filter((victim) => {
     if (filter === "all") return true
@@ -161,31 +174,52 @@ export function VictimsFilter({ victims, eypLabel, categories, labels }: Victims
       </p>
 
       {/* Victims grouped by category */}
-      <div className="space-y-12">
+      <div className="space-y-8">
         {categories.map((cat) => {
           const members = grouped.get(cat.key)
           if (!members || members.length === 0) return null
+          const isOpen = openSections.has(cat.key)
 
           return (
-            <div key={cat.key} className="space-y-6">
-              <div className="flex items-center gap-4">
-                <h4 className="text-xl font-serif font-bold whitespace-nowrap">
-                  {cat.label}
-                </h4>
-                <div className="h-px bg-border flex-1" />
-                <span className="text-sm text-muted-foreground whitespace-nowrap">
-                  {members.length}
-                </span>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {members.map((victim, idx) => (
-                  <VictimCard
-                    key={idx}
-                    victim={victim}
-                    eypLabel={eypLabel}
-                    sourceLabel={labels.source}
-                  />
-                ))}
+            <div key={cat.key}>
+              <button
+                onClick={() => toggleSection(cat.key)}
+                className="w-full text-left group"
+              >
+                <div className="flex items-center gap-4">
+                  <span
+                    className="text-muted-foreground text-sm transition-transform duration-200 select-none"
+                    style={{ transform: isOpen ? "rotate(90deg)" : "rotate(0deg)" }}
+                  >
+                    ▶
+                  </span>
+                  <h4 className="text-lg sm:text-xl font-serif font-bold group-hover:text-primary transition-colors">
+                    {cat.label}
+                  </h4>
+                  <div className="h-px bg-border flex-1 min-w-[2rem]" />
+                  <span className="text-sm text-muted-foreground whitespace-nowrap">
+                    {members.length}
+                  </span>
+                </div>
+              </button>
+
+              <div
+                className="overflow-hidden transition-all duration-300 ease-in-out"
+                style={{
+                  maxHeight: isOpen ? `${members.length * 300}px` : "0px",
+                  opacity: isOpen ? 1 : 0,
+                }}
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
+                  {members.map((victim, idx) => (
+                    <VictimCard
+                      key={idx}
+                      victim={victim}
+                      eypLabel={eypLabel}
+                      sourceLabel={labels.source}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           )

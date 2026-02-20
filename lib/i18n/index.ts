@@ -19,7 +19,7 @@ const translations = {
     nav: {
       timeline: "Χρονολόγιο",
       people: "Πρόσωπα",
-      victims: "Θύματα",
+      victims: "Στόχοι",
     },
 
     // Timeline page
@@ -38,7 +38,7 @@ const translations = {
 
     // Victims page
     victims: {
-      pageTitle: "Θύματα Παρακολουθήσεων",
+      pageTitle: "Στόχοι Παρακολουθήσεων",
       pageSubtitle: "Άτομα που στοχοποιήθηκαν μέσω του λογισμικού Predator ή της ΕΥΠ",
       filterAll: "Όλα",
       filterPredator: "Μόνο Predator",
@@ -76,7 +76,7 @@ const translations = {
     nav: {
       timeline: "Timeline",
       people: "Key Figures",
-      victims: "Victims",
+      victims: "Targets",
     },
 
     // Timeline page
@@ -95,7 +95,7 @@ const translations = {
 
     // Victims page
     victims: {
-      pageTitle: "Surveillance Victims",
+      pageTitle: "Surveillance Targets",
       pageSubtitle: "Individuals targeted through the Predator spyware or the Greek Intelligence Service (EYP)",
       filterAll: "All",
       filterPredator: "Predator only",

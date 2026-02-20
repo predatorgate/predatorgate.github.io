@@ -58,10 +58,10 @@ export function PeopleSections({ people, categories }: PeopleSectionsProps) {
                 >
                   ▶
                 </span>
-                <h3 className="text-2xl font-serif font-bold whitespace-nowrap group-hover:text-primary transition-colors">
+                <h3 className="text-lg sm:text-2xl font-serif font-bold group-hover:text-primary transition-colors">
                   {cat.label}
                 </h3>
-                <div className="h-px bg-border flex-1" />
+                <div className="h-px bg-border flex-1 min-w-[2rem]" />
                 <span className="text-sm text-muted-foreground whitespace-nowrap">
                   {members.length}
                 </span>
