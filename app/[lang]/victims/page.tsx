@@ -1,38 +1,47 @@
 import Link from "next/link"
 import { promises as fs } from "fs"
 import path from "path"
-import { parsePeopleCSV, categorizePeople, getPeopleCategoryList } from "@/lib/parse-people"
-import type { PeopleCategoriesData } from "@/lib/parse-people"
+import { parseVictimsCSV, enrichVictimsWithSources, enrichVictimsWithCategories, getCategoryList } from "@/lib/parse-people"
+import type { VictimSourcesData, VictimCategoriesData } from "@/lib/parse-people"
 import { isValidLocale, defaultLocale, getTranslations } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import { LanguageSwitcher } from "@/components/language-switcher"
-import { PeopleSections } from "@/components/people-sections"
+import { VictimsFilter } from "@/components/victims-filter"
 
-export default async function PeoplePage({ params }: { params: Promise<{ lang: string }> }) {
+export default async function VictimsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
   const locale: Locale = isValidLocale(lang) ? lang : defaultLocale
   const t = getTranslations(locale)
 
-  // Load people CSV
+  // Load victims CSV
   const dataDir = path.join(process.cwd(), "data", locale)
   const fallbackDir = path.join(process.cwd(), "data")
 
-  let peoplePath = path.join(dataDir, "people.csv")
+  let victimsPath = path.join(dataDir, "victims.csv")
   try {
-    await fs.access(peoplePath)
+    await fs.access(victimsPath)
   } catch {
-    peoplePath = path.join(fallbackDir, "people.csv")
+    victimsPath = path.join(fallbackDir, "victims.csv")
   }
 
-  const peopleContent = await fs.readFile(peoplePath, "utf-8")
-  const people = parsePeopleCSV(peopleContent)
+  const victimsContent = await fs.readFile(victimsPath, "utf-8")
+  const victims = parseVictimsCSV(victimsContent)
 
-  // Load people categories
-  const categoriesPath = path.join(process.cwd(), "data", "people-categories.json")
-  const categoriesContent = await fs.readFile(categoriesPath, "utf-8")
-  const categoriesData: PeopleCategoriesData = JSON.parse(categoriesContent)
-  const categorizedPeople = categorizePeople(people, categoriesData, locale)
-  const categoryList = getPeopleCategoryList(categoriesData, locale)
+  // Load victim sources
+  const victimSourcesPath = path.join(process.cwd(), "data", "victim-sources.json")
+  const victimSourcesContent = await fs.readFile(victimSourcesPath, "utf-8")
+  const victimSourcesData: VictimSourcesData = JSON.parse(victimSourcesContent)
+  const enrichedVictims = enrichVictimsWithSources(victims, victimSourcesData, locale)
+
+  // Load victim categories
+  const victimCategoriesPath = path.join(process.cwd(), "data", "victim-categories.json")
+  const victimCategoriesContent = await fs.readFile(victimCategoriesPath, "utf-8")
+  const victimCategoriesData: VictimCategoriesData = JSON.parse(victimCategoriesContent)
+  const categorizedVictims = enrichVictimsWithCategories(enrichedVictims, victimCategoriesData, locale)
+  const categoryList = getCategoryList(victimCategoriesData, locale)
+
+  // For English, show "EYP" instead of "ΕΥΠ" in method badges
+  const eypLabel = locale === "en" ? "EYP" : "ΕΥΠ"
 
   return (
     <div className="min-h-screen">
@@ -49,13 +58,13 @@ export default async function PeoplePage({ params }: { params: Promise<{ lang: s
               <Link href={`/${locale}`} className="text-xs sm:text-sm hover:text-primary transition-colors">
                 {t.nav.timeline}
               </Link>
-              <Link href={`/${locale}/people`} className="text-xs sm:text-sm text-primary font-semibold">
+              <Link href={`/${locale}/people`} className="text-xs sm:text-sm hover:text-primary transition-colors">
                 {t.nav.people}
               </Link>
-              <Link href={`/${locale}/victims`} className="text-xs sm:text-sm hover:text-primary transition-colors">
+              <Link href={`/${locale}/victims`} className="text-xs sm:text-sm text-primary font-semibold">
                 {t.nav.victims}
               </Link>
-              <LanguageSwitcher currentLang={locale} currentPath="/people" />
+              <LanguageSwitcher currentLang={locale} currentPath="/victims" />
             </nav>
           </div>
         </div>
@@ -64,15 +73,28 @@ export default async function PeoplePage({ params }: { params: Promise<{ lang: s
       {/* Main Content */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-16">
+          <div className="max-w-6xl mx-auto space-y-16">
             {/* Page Title */}
             <div className="text-center space-y-4">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold">{t.people.pageTitle}</h2>
-              <p className="text-muted-foreground text-lg">{t.people.pageSubtitle}</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold">{t.victims.pageTitle}</h2>
+              <p className="text-muted-foreground text-lg">{t.victims.pageSubtitle}</p>
             </div>
 
-            {/* Grouped Sections */}
-            <PeopleSections people={categorizedPeople} categories={categoryList} />
+            {/* Victims Section */}
+            <div className="space-y-8">
+              <VictimsFilter
+                victims={categorizedVictims}
+                eypLabel={eypLabel}
+                categories={categoryList}
+                labels={{
+                  all: t.victims.filterAll,
+                  predatorOnly: t.victims.filterPredator,
+                  eypOnly: t.victims.filterEyp,
+                  both: t.victims.filterBoth,
+                  source: t.victims.filterSource,
+                }}
+              />
+            </div>
           </div>
         </div>
       </section>

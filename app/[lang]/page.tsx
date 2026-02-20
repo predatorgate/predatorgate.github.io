@@ -52,6 +52,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               <Link href={`/${locale}/people`} className="text-xs sm:text-sm hover:text-primary transition-colors">
                 {t.nav.people}
               </Link>
+              <Link href={`/${locale}/victims`} className="text-xs sm:text-sm hover:text-primary transition-colors">
+                {t.nav.victims}
+              </Link>
               <LanguageSwitcher currentLang={locale} currentPath="/" />
             </nav>
           </div>
@@ -151,6 +154,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               </Link>
               <Link href={`/${locale}/people`} className="hover:text-primary transition-colors">
                 {t.nav.people}
+              </Link>
+              <Link href={`/${locale}/victims`} className="hover:text-primary transition-colors">
+                {t.nav.victims}
               </Link>
             </div>
           </div>

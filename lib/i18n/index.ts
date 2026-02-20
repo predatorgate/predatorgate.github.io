@@ -19,6 +19,7 @@ const translations = {
     nav: {
       timeline: "Χρονολόγιο",
       people: "Πρόσωπα",
+      victims: "Θύματα",
     },
 
     // Timeline page
@@ -29,14 +30,16 @@ const translations = {
       sources: "Πηγές:",
     },
 
-    // People page
+    // People (Key Figures) page
     people: {
-      pageTitle: "Πρόσωπα του Σκανδάλου",
-      pageSubtitle: "Τα κύρια πρόσωπα που εμπλέκονται και τα θύματα του Predatorgate",
-      mainPeopleTitle: "Κύρια Εμπλεκόμενα Πρόσωπα",
-      mainPeopleSubtitle: "Πρόσωπα και οργανισμοί που σχετίζονται με το σκάνδαλο",
-      victimsTitle: "Θύματα Παρακολουθήσεων",
-      victimsSubtitle: "Άτομα που στοχοποιήθηκαν μέσω του λογισμικού Predator ή της ΕΥΠ",
+      pageTitle: "Κύρια Εμπλεκόμενα Πρόσωπα",
+      pageSubtitle: "Πρόσωπα και οργανισμοί που σχετίζονται με το σκάνδαλο",
+    },
+
+    // Victims page
+    victims: {
+      pageTitle: "Θύματα Παρακολουθήσεων",
+      pageSubtitle: "Άτομα που στοχοποιήθηκαν μέσω του λογισμικού Predator ή της ΕΥΠ",
       filterAll: "Όλα",
       filterPredator: "Μόνο Predator",
       filterEyp: "Μόνο ΕΥΠ",
@@ -72,7 +75,8 @@ const translations = {
     // Navigation
     nav: {
       timeline: "Timeline",
-      people: "People",
+      people: "Key Figures",
+      victims: "Victims",
     },
 
     // Timeline page
@@ -83,14 +87,16 @@ const translations = {
       sources: "Sources:",
     },
 
-    // People page
+    // People (Key Figures) page
     people: {
-      pageTitle: "People Involved in the Scandal",
-      pageSubtitle: "The key figures involved and the victims of Predatorgate",
-      mainPeopleTitle: "Key Figures",
-      mainPeopleSubtitle: "People and organizations linked to the scandal",
-      victimsTitle: "Surveillance Victims",
-      victimsSubtitle: "Individuals targeted through the Predator spyware or the Greek Intelligence Service (EYP)",
+      pageTitle: "Key Figures",
+      pageSubtitle: "People and organizations linked to the scandal",
+    },
+
+    // Victims page
+    victims: {
+      pageTitle: "Surveillance Victims",
+      pageSubtitle: "Individuals targeted through the Predator spyware or the Greek Intelligence Service (EYP)",
       filterAll: "All",
       filterPredator: "Predator only",
       filterEyp: "EYP only",

@@ -1,0 +1,123 @@
+{
+  "category_labels": {
+    "spyware_infrastructure": {
+      "gr": "Πάροχοι Λογισμικού Κατασκοπείας",
+      "en": "Spyware Providers"
+    },
+    "state_apparatus": {
+      "gr": "Υπηρεσίες Πληροφοριών & Κρατικά Στελέχη",
+      "en": "Intelligence Services & State Officials"
+    },
+    "intermediaries": {
+      "gr": "Επιχειρηματικοί Σύνδεσμοι",
+      "en": "Business Links"
+    },
+    "political_leadership": {
+      "gr": "Πολιτική Ηγεσία",
+      "en": "Political Leadership"
+    },
+    "cover_up": {
+      "gr": "Δικαιοσύνη & Ανεξάρτητες Αρχές",
+      "en": "Justice & Independent Authorities"
+    }
+  },
+  "category_descriptions": {
+    "spyware_infrastructure": {
+      "gr": "Τα πρόσωπα και οι εταιρείες που ανέπτυξαν, πούλησαν και λειτούργησαν το λογισμικό Predator στην Ελλάδα.",
+      "en": "The individuals and companies that developed, sold, and operated the Predator spyware in Greece."
+    },
+    "state_apparatus": {
+      "gr": "Τα πρόσωπα εντός της ΕΥΠ και του κρατικού μηχανισμού που ενέκριναν ή διευκόλυναν τις παρακολουθήσεις.",
+      "en": "The individuals within EYP and the state apparatus who authorized or facilitated the surveillance."
+    },
+    "intermediaries": {
+      "gr": "Οι μεσάζοντες που συνέδεσαν την κρατική εξουσία με τις ιδιωτικές δυνατότητες παρακολούθησης.",
+      "en": "The brokers who connected state power with private surveillance capability."
+    },
+    "political_leadership": {
+      "gr": "Οι πολιτικοί ηγέτες που είχαν την τελική ευθύνη, είτε μέσω άμεσης γνώσης, είτε μέσω σκόπιμης άγνοιας, είτε μέσω θεσμικής λογοδοσίας.",
+      "en": "The political leaders who bore ultimate responsibility, whether through direct knowledge, willful blindness, or institutional accountability."
+    },
+    "cover_up": {
+      "gr": "Δικαστικοί λειτουργοί, εισαγγελείς και επικεφαλής ανεξάρτητων αρχών με ρόλο στην έρευνα ή την εποπτεία της υπόθεσης.",
+      "en": "Judicial officials, prosecutors, and heads of independent authorities with a role in the investigation or oversight of the case."
+    }
+  },
+  "category_order": ["political_leadership", "state_apparatus", "intermediaries", "spyware_infrastructure", "cover_up"],
+  "people": {
+    "en": {
+      "Kyriakos Mitsotakis": "political_leadership",
+      "Grigoris Dimitriadis": "political_leadership",
+      "Panagiotis Kontoleon": "state_apparatus",
+      "Evangelia Georgakopoulou": "state_apparatus",
+      "Themistoklis Demiris": "state_apparatus",
+      "Konstantinos Tsouvalas": "state_apparatus",
+      "Giannis Lavranos": "intermediaries",
+      "Felix Bitzios": "intermediaries",
+      "Krikel": "intermediaries",
+      "Sotiris Ntalas": "intermediaries",
+      "Stamatis Trimpalis": "intermediaries",
+      "Eleni Milia": "intermediaries",
+      "Nikos Liolios": "intermediaries",
+      "Yiannis Karagiannis": "intermediaries",
+      "Nikos Panagiotopoulos": "intermediaries",
+      "Electrum Technologies / Ioniki Technologiki": "intermediaries",
+      "Eneross Holdings Limited": "intermediaries",
+      "Evangelia (Lina) Katsouda": "intermediaries",
+      "Tal Dilian": "spyware_infrastructure",
+      "Sara-Faisal Alexandra-Hamou": "spyware_infrastructure",
+      "Avraam Sahak Avni": "spyware_infrastructure",
+      "Nir Ben Moshe": "spyware_infrastructure",
+      "Intellexa": "spyware_infrastructure",
+      "Cytrox": "spyware_infrastructure",
+      "Thalestris Limited": "spyware_infrastructure",
+      "Santinomo Ltd": "spyware_infrastructure",
+      "Rotem Farkas": "spyware_infrastructure",
+      "Merom Harpaz": "spyware_infrastructure",
+      "Panagiotis Koutsios": "spyware_infrastructure",
+      "Stavros Komnopoulos": "spyware_infrastructure",
+      "Vasiliki Vlachou": "cover_up",
+      "Isidoros Dogiakos": "cover_up",
+      "Georgia Adeilini": "cover_up",
+      "Achilleas Zisis": "cover_up",
+      "Angelos Binis": "cover_up"
+    },
+    "gr": {
+      "Κυριάκος Μητσοτάκης": "political_leadership",
+      "Γρηγόρης Δημητριάδης": "political_leadership",
+      "Παναγιώτης Κοντολέων": "state_apparatus",
+      "Ευαγγελία Γεωργακόπουλου": "state_apparatus",
+      "Θεμιστοκλής Δεμίρης": "state_apparatus",
+      "Κωνσταντίνος Τσουβάλας": "state_apparatus",
+      "Γιάννης Λαβράνος": "intermediaries",
+      "Φέλιξ Μπίτζιος": "intermediaries",
+      "Krikel": "intermediaries",
+      "Σωτήρης Ντάλας": "intermediaries",
+      "Σταμάτης Τριμπάλης": "intermediaries",
+      "Ελένη Μηλιά": "intermediaries",
+      "Νίκος Λιόλιος": "intermediaries",
+      "Γιάννης Καραγιάννης": "intermediaries",
+      "Νίκος Παναγιωτόπουλος": "intermediaries",
+      "Ελέκτρουμ Τεκνόλοτζις / Ιονική Τεχνολογική": "intermediaries",
+      "Eneross Holdings Limited": "intermediaries",
+      "Ευαγγελία (Λίνα) Κατσούδα": "intermediaries",
+      "Ταλ Ντίλιαν": "spyware_infrastructure",
+      "Σάρα-Φαϊσάλ Αλεξάνδρα-Χαμού": "spyware_infrastructure",
+      "Αβραάμ Σαχάκ Άβνι": "spyware_infrastructure",
+      "Νιρ Μπεν Μοσέ": "spyware_infrastructure",
+      "Intellexa": "spyware_infrastructure",
+      "Cytrox": "spyware_infrastructure",
+      "Thalestris Limited": "spyware_infrastructure",
+      "Santinomo Ltd": "spyware_infrastructure",
+      "Ροτέμ Φάρκας": "spyware_infrastructure",
+      "Μερόμ Χαρπάζ": "spyware_infrastructure",
+      "Παναγιώτης Κούτσιος": "spyware_infrastructure",
+      "Σταύρος Κομνόπουλος": "spyware_infrastructure",
+      "Βασιλική Βλάχου": "cover_up",
+      "Ισίδωρος Ντογιάκος": "cover_up",
+      "Γεωργία Αδειλίνη": "cover_up",
+      "Αχιλλέας Ζήσης": "cover_up",
+      "Άγγελος Μπίνης": "cover_up"
+    }
+  }
+}

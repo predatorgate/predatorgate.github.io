@@ -66,6 +66,40 @@ export function getCategoryList(
   }))
 }
 
+export interface PeopleCategoriesData {
+  category_labels: Record<string, Record<string, string>>
+  category_descriptions: Record<string, Record<string, string>>
+  category_order: string[]
+  people: Record<string, Record<string, string>>
+}
+
+export interface CategorizedPerson extends Person {
+  category: string
+}
+
+export function categorizePeople(
+  people: Person[],
+  categoriesData: PeopleCategoriesData,
+  locale: string
+): CategorizedPerson[] {
+  const mapping = categoriesData.people[locale] || {}
+  return people.map((person) => ({
+    ...person,
+    category: mapping[person.name] || "other",
+  }))
+}
+
+export function getPeopleCategoryList(
+  categoriesData: PeopleCategoriesData,
+  locale: string
+): { key: string; label: string; description: string }[] {
+  return categoriesData.category_order.map((key) => ({
+    key,
+    label: categoriesData.category_labels[key]?.[locale] || categoriesData.category_labels[key]?.["en"] || key,
+    description: categoriesData.category_descriptions[key]?.[locale] || categoriesData.category_descriptions[key]?.["en"] || "",
+  }))
+}
+
 export function parsePeopleCSV(csvContent: string): Person[] {
   const lines = csvContent.trim().split("\n")
   const people: Person[] = []
