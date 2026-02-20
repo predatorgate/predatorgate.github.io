@@ -40,6 +40,14 @@
       "url": "https://www.news247.gr/politiki/alexis-tsipras-ipevale-protasi-dispistias-kata-tis-kivernisis-apokalipse-ta-onomata-ton-stoxon-tis-efp/",
       "method": "eyp"
     },
+    "adae_eyp_2": {
+      "label": {
+        "gr": "Αρχή Διατήρησης Απορρήτου Επικοινωνιών (ΑΔΑΕ)",
+        "en": "Authority for Communication Security and Privacy (ADAE)"
+      },
+      "url": "https://govwatch.gr/finds/eyp-parakoloythisi-toy-eyrovoyleyti-kyrtsoy-kai-toy-dimosiografoy-tellogloy",
+      "method": "eyp"
+    },
     "documento_predator": {
       "label": {
         "gr": "Documento",
@@ -428,7 +436,10 @@
         "documento_eyp"
       ],
       "Γιώργος Κύρτσος": [
-        "documento_eyp"
+        "adae_eyp_2"
+      ],
+      "Τάσος Τέλλογλου": [
+        "adae_eyp_2"
       ],
       "Αλέξανδρος Διακόπουλος": [
         "adae_eyp",
@@ -775,7 +786,10 @@
         "adae_eyp"
       ],
       "Giorgos Kyrtsos": [
-        "documento_eyp"
+        "documento_eyp_2"
+      ],
+      "Tasos Telloglou": [
+        "documento_eyp_2"
       ],
       "Takis Theodorikakos": [
         "apdpx_insidestory_predator"
