@@ -8,6 +8,13 @@ import type { Locale } from "@/lib/i18n"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { PeopleSections } from "@/components/people-sections"
 
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  const locale: Locale = isValidLocale(lang) ? lang : defaultLocale
+  const t = getTranslations(locale)
+  return { title: t.nav.people }
+}
+
 export default async function PeoplePage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
   const locale: Locale = isValidLocale(lang) ? lang : defaultLocale

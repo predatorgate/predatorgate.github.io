@@ -8,6 +8,13 @@ import type { Locale } from "@/lib/i18n"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { VictimsFilter } from "@/components/victims-filter"
 
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  const locale: Locale = isValidLocale(lang) ? lang : defaultLocale
+  const t = getTranslations(locale)
+  return { title: t.nav.victims }
+}
+
 export default async function VictimsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
   const locale: Locale = isValidLocale(lang) ? lang : defaultLocale

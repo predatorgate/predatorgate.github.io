@@ -2,7 +2,10 @@ import type React from "react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Predatorgate",
+  title: {
+    default: "Predatorgate",
+    template: "%s | Predatorgate",
+  },
   description: "Predatorgate - Surveillance Scandal Timeline",
   generator: "v0.app",
 }

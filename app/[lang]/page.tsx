@@ -7,6 +7,13 @@ import { isValidLocale, defaultLocale, getTranslations } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import { LanguageSwitcher } from "@/components/language-switcher"
 
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  const locale: Locale = isValidLocale(lang) ? lang : defaultLocale
+  const t = getTranslations(locale)
+  return { title: t.nav.timeline }
+}
+
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
   const locale: Locale = isValidLocale(lang) ? lang : defaultLocale
