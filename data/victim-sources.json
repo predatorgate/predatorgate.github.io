@@ -1,12 +1,12 @@
 {
   "source_definitions": {
-    "apdpx_insidestory": {
+    "insidestory_eyp": {
       "label": {
-        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (ΑΠΔΠΧ)",
-        "en": "Hellenic Data Protection Authority (APDPX)"
+        "gr": "Αντιεισαγγελέας του Αρείου Πάγου",
+        "en": "Supreme Court Deputy Prosecutor"
       },
       "url": "https://insidestory.gr/article/aytoi-einai-oi-koinoi-stohoi-eyp-kai-predator",
-      "method": "both"
+      "method": "eyp"
     },
     "apdpx_insidestory_predator": {
       "label": {
@@ -114,28 +114,28 @@
         "apdpx_insidestory_predator"
       ],
       "Π. Ζ.": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Σ. Φ.": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Μανώλης Γραφάκος": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Γιώργος Μυλωνάκης": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Θανάσης Κουκάκης": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Χρήστος Μπαρδάκης": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Τίνα Μεσσαροπούλου": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Γιάννης Ολύμπιος": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Θοδωρής Λάγιος": [
         "adae_eyp"
@@ -153,46 +153,46 @@
         "documento_2"
       ],
       "Θωμάς Βαρβιτσιώτης": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Αργυρώ Ξαγοράρη": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Κωστής Χατζηδάκης": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Νίκος Σιγάλας": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Κωστής Μουσουρούλης": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Αριστείδης Αλεξόπουλος": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Λάκης Λαζόπουλος": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Στέφανος Χίος": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Φωτεινή Ιωάννου": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Πηνελόπη Μηνιάτη": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Τόνια Πρίμπα": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Γιάννης Φυτίλης": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Άρτεμις Σίφορντ": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Μαίη Ζαννή": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Γιάννης Ζερβάκης": [
         "documento_4"
@@ -378,22 +378,22 @@
         "documento_2"
       ],
       "Νίκος Ανδρουλάκης": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Γιάννης Κουρτάκης": [
         "documento_1"
       ],
       "Μαρία Διαμαντή": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Σπύρος Κουσουνής": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Μένιος Φουρθιώτης": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Κωνσταντίνος Φλώρος": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Μιχάλης Μπεκίρης": [
         "apdpx_insidestory_sms"
@@ -460,16 +460,16 @@
     },
     "en": {
       "Thanasis Koukakis": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Giorgos Mylonakis": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Vangelis Pitteros": [
         "documento_2"
       ],
       "Christos Bardakis": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Petros Kousoulos": [
         "documento_2"
@@ -481,16 +481,16 @@
         "documento_2"
       ],
       "Tina Messaropoulou": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Maria Sarafoglou": [
         "documento_2"
       ],
       "P. Ζ.": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "S. F.": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Olinka Varvitsiotis": [
         "documento_2"
@@ -538,7 +538,7 @@
         "documento_4"
       ],
       "Giannis Olympios": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Michalis Karamalakis": [
         "documento_3"
@@ -664,43 +664,43 @@
         "documento_2"
       ],
       "Thomas Varvitsiotis": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Argyro Xagorari": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Kostis Hatzidakis": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Nikos Sigalas": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Kostis Mousouroulis": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Aristeidis Alexopoulos": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Lakis Lazopoulos": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Stefanos Chios": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Foteini Ioannou": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Pinelopi Miniati": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Tonia Primba": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Giannis Fytilis": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Artemis Seaford": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Jenny Balatsinou": [
         "documento_1"
@@ -715,25 +715,25 @@
         "documento_1"
       ],
       "Mai Zanni": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Nikos Androulakis": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Maria Diamanti": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Spyros Kousounis": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Menios Fourthiotis": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Konstantinos Floros": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Manolis Grafakos": [
-        "apdpx_insidestory"
+        "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Michalis Bekiris": [
         "apdpx_insidestory_sms"
