@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://predatorgate.gr/gr</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://predatorgate.gr/gr" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://predatorgate.gr/en" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://predatorgate.gr/en</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://predatorgate.gr/gr" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://predatorgate.gr/en" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://predatorgate.gr/gr/people</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://predatorgate.gr/gr/people" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://predatorgate.gr/en/people" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://predatorgate.gr/en/people</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://predatorgate.gr/gr/people" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://predatorgate.gr/en/people" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://predatorgate.gr/gr/victims</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://predatorgate.gr/gr/victims" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://predatorgate.gr/en/victims" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://predatorgate.gr/en/victims</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://predatorgate.gr/gr/victims" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://predatorgate.gr/en/victims" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

@@ -11,7 +11,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params
   const locale: Locale = isValidLocale(lang) ? lang : defaultLocale
   const t = getTranslations(locale)
-  return { title: t.nav.timeline }
+  return {
+    title: t.nav.timeline,
+    description: t.meta.timelineDescription,
+    openGraph: {
+      title: t.meta.timelineTitle,
+      description: t.meta.timelineDescription,
+    },
+  }
 }
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {

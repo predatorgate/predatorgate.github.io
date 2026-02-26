@@ -12,7 +12,14 @@ const translations = {
     meta: {
       title: "Predatorgate - Ιστορικό του Σκανδάλου",
       description:
-        "Μια πλήρης χρονολογική καταγραφή των γεγονότων που συνθέτουν το σκάνδαλο παρακολουθήσεων με το λογισμικό Predator στην Ελλάδα",
+        "Μια πλήρης χρονολογική καταγραφή των γεγονότων που συνθέτουν το σκάνδαλο παρακολουθήσεων με το λογισμικό Predator στην Ελλάδα. Χρονολόγιο, εμπλεκόμενα πρόσωπα και στόχοι παρακολουθήσεων.",
+      keywords: "predatorgate, predator, σκάνδαλο υποκλοπών, παρακολουθήσεις, ΕΥΠ, Ελλάδα, λογισμικό κατασκοπείας, Intellexa, Krikel, χρονολόγιο, surveillance scandal, spyware Greece",
+      timelineTitle: "Χρονολόγιο | Predatorgate",
+      timelineDescription: "Χρονολογική σειρά γεγονότων του σκανδάλου παρακολουθήσεων με το λογισμικό Predator στην Ελλάδα.",
+      peopleTitle: "Πρόσωπα | Predatorgate",
+      peopleDescription: "Τα κύρια εμπλεκόμενα πρόσωπα και οργανισμοί στο σκάνδαλο παρακολουθήσεων Predator στην Ελλάδα.",
+      targetsTitle: "Στόχοι | Predatorgate",
+      targetsDescription: "Τα άτομα που στοχοποιήθηκαν μέσω του λογισμικού Predator ή της ΕΥΠ στην Ελλάδα.",
     },
 
     // Navigation
@@ -69,7 +76,14 @@ const translations = {
     meta: {
       title: "Predatorgate - Scandal Timeline",
       description:
-        "A comprehensive chronological record of the events that make up the Predator spyware surveillance scandal in Greece",
+        "A comprehensive chronological record of the events that make up the Predator spyware surveillance scandal in Greece. Timeline, key figures, and surveillance targets.",
+      keywords: "predatorgate, predator spyware, surveillance scandal, Greece, wiretapping, EYP, Greek intelligence, Intellexa, Krikel, timeline, Predator Files, spyware Greece",
+      timelineTitle: "Timeline | Predatorgate",
+      timelineDescription: "Chronological timeline of the Predator spyware surveillance scandal in Greece.",
+      peopleTitle: "Key Figures | Predatorgate",
+      peopleDescription: "The key individuals and organizations involved in the Predator spyware surveillance scandal in Greece.",
+      targetsTitle: "Targets | Predatorgate",
+      targetsDescription: "Individuals targeted through the Predator spyware or the Greek Intelligence Service (EYP).",
     },
 
     // Navigation

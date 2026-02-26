@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     template: "%s | Predatorgate",
   },
   description: "Predatorgate - Surveillance Scandal Timeline",
-  generator: "v0.app",
+  metadataBase: new URL("https://predatorgate.gr"),
 }
 
 export default function RootLayout({

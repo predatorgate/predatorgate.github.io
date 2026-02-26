@@ -12,7 +12,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params
   const locale: Locale = isValidLocale(lang) ? lang : defaultLocale
   const t = getTranslations(locale)
-  return { title: t.nav.victims }
+  return {
+    title: t.nav.victims,
+    description: t.meta.targetsDescription,
+    openGraph: {
+      title: t.meta.targetsTitle,
+      description: t.meta.targetsDescription,
+    },
+  }
 }
 
 export default async function VictimsPage({ params }: { params: Promise<{ lang: string }> }) {
