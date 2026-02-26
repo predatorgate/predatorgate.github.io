@@ -10,10 +10,10 @@ const translations = {
   gr: {
     // Metadata
     meta: {
-      title: "Predatorgate - Ιστορικό του Σκανδάλου",
+      title: "Predatorgate - Predator και ΕΥΠ: Το σκάνδαλο υποκλοπών στην Ελλάδα",
       description:
-        "Μια πλήρης χρονολογική καταγραφή των γεγονότων που συνθέτουν το σκάνδαλο παρακολουθήσεων με το λογισμικό Predator στην Ελλάδα. Χρονολόγιο, εμπλεκόμενα πρόσωπα και στόχοι παρακολουθήσεων.",
-      keywords: "predatorgate, predator, σκάνδαλο υποκλοπών, παρακολουθήσεις, ΕΥΠ, Ελλάδα, λογισμικό κατασκοπείας, Intellexa, Krikel, χρονολόγιο, surveillance scandal, spyware Greece",
+        "Το πληρέστερο αρχείο για το σκάνδαλο υποκλοπών στην Ελλάδα. Χρονολόγιο γεγονότων, εμπλεκόμενα πρόσωπα και στόχοι παρακολουθήσεων με το λογισμικό Predator και την ΕΥΠ. Πρωτογενείς πηγές, δικαστικές καταθέσεις και δημοσιογραφικές έρευνες.",
+      keywords: "predatorgate, predator, σκάνδαλο υποκλοπών, παρακολουθήσεις, ΕΥΠ, Ελλάδα, λογισμικό κατασκοπείας, Intellexa, Krikel, Μητσοτάκης, Ανδρουλάκης, Κουκάκης, Δημητριάδης, χρονολόγιο, surveillance scandal, spyware Greece, Greek wiretapping scandal",
       timelineTitle: "Χρονολόγιο | Predatorgate",
       timelineDescription: "Χρονολογική σειρά γεγονότων του σκανδάλου παρακολουθήσεων με το λογισμικό Predator στην Ελλάδα.",
       peopleTitle: "Πρόσωπα | Predatorgate",
@@ -27,6 +27,17 @@ const translations = {
       timeline: "Χρονολόγιο",
       people: "Πρόσωπα",
       victims: "Στόχοι",
+    },
+
+    // Landing page
+    landing: {
+      headline: "Predator και ΕΥΠ: Το σκάνδαλο υποκλοπών στην Ελλάδα",
+      intro: "Το 2022 αποκαλύφθηκε ότι η Εθνική Υπηρεσία Πληροφοριών (ΕΥΠ) παρακολουθούσε δημοσιογράφους, πολιτικούς, επιχειρηματίες και δημόσια πρόσωπα, ενώ παράλληλα το λογισμικό κατασκοπείας Predator χρησιμοποιούνταν για την παράνομη παρακολούθηση των κινητών τηλεφώνων τους. Αυτή η σελίδα καταγράφει ολόκληρο το εύρος του σκανδάλου μέσα από πρωτογενείς πηγές, δικαστικές καταθέσεις και δημοσιογραφικές έρευνες.",
+      statEvents: "Χρονολογικά γεγονότα",
+      statFigures: "Εμπλεκόμενα πρόσωπα",
+      statTargets: "Στόχοι",
+      explore: "Εξερευνήστε το",
+      latestTitle: "Τελευταίες εξελίξεις",
     },
 
     // Timeline page
@@ -74,10 +85,10 @@ const translations = {
   en: {
     // Metadata
     meta: {
-      title: "Predatorgate - Scandal Timeline",
+      title: "Predatorgate - Predator and EYP: The Surveillance Scandal in Greece",
       description:
-        "A comprehensive chronological record of the events that make up the Predator spyware surveillance scandal in Greece. Timeline, key figures, and surveillance targets.",
-      keywords: "predatorgate, predator spyware, surveillance scandal, Greece, wiretapping, EYP, Greek intelligence, Intellexa, Krikel, timeline, Predator Files, spyware Greece",
+        "The most comprehensive archive of the Greek surveillance scandal. Timeline of events, key figures, and surveillance targets of the Predator spyware and the Greek National Intelligence Service (EYP). Primary sources, court testimony, and investigative reporting.",
+      keywords: "predatorgate, predator spyware, surveillance scandal, Greece, wiretapping, EYP, Greek intelligence, Greek wiretapping scandal, Intellexa, Krikel, Mitsotakis, Androulakis, Koukakis, Predator Files, spyware Greece, predator spyware Greece, Greek surveillance",
       timelineTitle: "Timeline | Predatorgate",
       timelineDescription: "Chronological timeline of the Predator spyware surveillance scandal in Greece.",
       peopleTitle: "Key Figures | Predatorgate",
@@ -91,6 +102,17 @@ const translations = {
       timeline: "Timeline",
       people: "Key Figures",
       victims: "Targets",
+    },
+
+    // Landing page
+    landing: {
+      headline: "Predator and EYP: The surveillance scandal in Greece",
+      intro: "In 2022, it was revealed that the Greek National Intelligence Service (EYP) had been surveilling journalists, politicians, businesspeople, and public officials, while the Predator spyware was simultaneously used to illegally monitor their mobile phones. This site documents the full scope of the scandal through primary sources, court testimony, and investigative reporting.",
+      statEvents: "Events",
+      statFigures: "Key Figures",
+      statTargets: "Targets",
+      explore: "Explore the",
+      latestTitle: "Latest developments",
     },
 
     // Timeline page

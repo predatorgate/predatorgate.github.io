@@ -12,11 +12,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const locale: Locale = isValidLocale(lang) ? lang : defaultLocale
   const t = getTranslations(locale)
   return {
-    title: t.meta.title,
-    description: t.meta.description,
+    title: t.nav.timeline,
+    description: t.meta.timelineDescription,
     openGraph: {
-      title: t.meta.title,
-      description: t.meta.description,
+      title: t.meta.timelineTitle,
+      description: t.meta.timelineDescription,
     },
   }
 }
@@ -26,13 +26,15 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
   const locale: Locale = isValidLocale(lang) ? lang : defaultLocale
   const t = getTranslations(locale)
 
-  // Load timeline data for stats and latest events
+  // Load data from the locale-specific directory, falling back to root
   const dataDir = path.join(process.cwd(), "data", locale)
   const fallbackDir = path.join(process.cwd(), "data")
 
   let csvPath = path.join(dataDir, "timeline.csv")
+  // Single shared sources.json for all languages (keyed by hash of Greek date+description)
   const sourcesPath = path.join(fallbackDir, "sources.json")
 
+  // Fall back to root data dir if locale-specific CSV doesn't exist
   try {
     await fs.access(csvPath)
   } catch {
@@ -44,40 +46,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
   const events = parseCSV(csvContent)
   const sourcesMap = JSON.parse(sourcesContent)
-  const allEvents = enrichWithSources(events, sourcesMap).reverse()
-  const latestEvents = allEvents.slice(0, 3)
-
-  // Load people count
-  let peoplePath = path.join(dataDir, "people.csv")
-  try {
-    await fs.access(peoplePath)
-  } catch {
-    peoplePath = path.join(fallbackDir, "people.csv")
-  }
-  const peopleContent = await fs.readFile(peoplePath, "utf-8")
-  const peopleCount = peopleContent.trim().split("\n").length - 1
-
-  // Load victims count
-  let victimsPath = path.join(dataDir, "victims.csv")
-  try {
-    await fs.access(victimsPath)
-  } catch {
-    victimsPath = path.join(fallbackDir, "victims.csv")
-  }
-  const victimsContent = await fs.readFile(victimsPath, "utf-8")
-  const victimsCount = victimsContent.trim().split("\n").length - 1
-
-  const eventsRounded = Math.floor(allEvents.length / 10) * 10
-
-  const stats = [
-    { value: `${eventsRounded}+`, label: t.landing.statEvents, href: `/${locale}/timeline` },
-    { value: String(peopleCount), label: t.landing.statFigures, href: `/${locale}/people` },
-    { value: String(victimsCount), label: t.landing.statTargets, href: `/${locale}/victims` },
-  ]
+  const timelineEvents = enrichWithSources(events, sourcesMap).reverse()
 
   return (
     <div className="min-h-screen">
-      {/* Header */}
+      {/* Hero Section */}
       <header className="border-b border-border sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-3 py-3 sm:px-4 sm:py-6">
           <div className="flex items-center justify-between gap-2">
@@ -87,7 +60,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               </h1>
             </Link>
             <nav className="flex items-center gap-3 sm:gap-6">
-              <Link href={`/${locale}/timeline`} className="text-xs sm:text-sm hover:text-primary transition-colors">
+              <Link href={`/${locale}`} className="text-xs sm:text-sm text-primary font-semibold">
                 {t.nav.timeline}
               </Link>
               <Link href={`/${locale}/people`} className="text-xs sm:text-sm hover:text-primary transition-colors">
@@ -102,70 +75,31 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="py-16 sm:py-24">
+      {/* Timeline Section */}
+      <section id="timeline" className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold leading-tight">
-              {t.landing.headline}
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              {t.landing.intro}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="pb-16 sm:pb-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="grid grid-cols-3 gap-3 sm:gap-6">
-              {stats.map((stat) => (
-                <Link key={stat.href} href={stat.href}>
-                  <Card className="p-4 sm:p-8 text-center hover:border-primary/50 transition-all cursor-pointer group hover:shadow-md">
-                    <div className="text-2xl sm:text-4xl font-bold text-primary group-hover:scale-105 transition-transform">
-                      {stat.value}
-                    </div>
-                    <div className="text-xs sm:text-sm text-muted-foreground mt-1 sm:mt-2 group-hover:text-primary transition-colors">
-                      {stat.label} <span className="inline-block transition-transform group-hover:translate-x-0.5">→</span>
-                    </div>
-                  </Card>
-                </Link>
-              ))}
+          <div className="max-w-4xl mx-auto">
+            <div className="mb-16 text-center">
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4">{t.timeline.heading}</h3>
+              <p className="text-muted-foreground">{t.timeline.subheading}</p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Latest developments */}
-      <section className="pb-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-xl sm:text-2xl font-serif font-bold mb-6">
-              {t.landing.latestTitle}
-            </h3>
-            <div className="space-y-4">
-              {latestEvents.map((event, idx) => (
-                <Card key={idx} className="p-4 sm:p-6 hover:border-primary/50 transition-colors">
-                  <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                    <span className="text-xs uppercase tracking-wider bg-primary/10 text-primary px-3 py-1 rounded-full font-semibold shrink-0 self-start">
-                      {event.date}
-                    </span>
-                    <p className="text-sm text-muted-foreground leading-relaxed text-pretty">
-                      {event.description}
-                    </p>
-                  </div>
-                </Card>
+            {/* Timeline */}
+            <div className="relative">
+              {/* Timeline Line */}
+              <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border hidden md:block" />
+
+              {timelineEvents.map((event, idx) => (
+                <TimelineItem
+                  key={idx}
+                  date={event.date}
+                  description={event.description}
+                  sources={event.sources}
+                  align={idx % 2 === 0 ? "right" : "left"}
+                  sourceLabel={t.timeline.source}
+                  sourcesLabel={t.timeline.sources}
+                />
               ))}
-            </div>
-            <div className="mt-8 text-center">
-              <Link
-                href={`/${locale}/timeline`}
-                className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-semibold"
-              >
-                {t.landing.explore} {t.nav.timeline} →
-              </Link>
             </div>
           </div>
         </div>
@@ -229,7 +163,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               .
             </p>
             <div className="flex justify-center gap-6 text-sm">
-              <Link href={`/${locale}/timeline`} className="hover:text-primary transition-colors">
+              <Link href={`/${locale}`} className="hover:text-primary transition-colors">
                 {t.nav.timeline}
               </Link>
               <Link href={`/${locale}/people`} className="hover:text-primary transition-colors">
@@ -242,6 +176,91 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           </div>
         </div>
       </footer>
+    </div>
+  )
+}
+
+interface TimelineItemProps {
+  date: string
+  description: string
+  sources: string[]
+  align: "left" | "right"
+  sourceLabel: string
+  sourcesLabel: string
+}
+
+function TimelineItem({ date, description, sources, align, sourceLabel, sourcesLabel }: TimelineItemProps) {
+  const extractSourceInfo = (url: string): { label: string; archived: boolean } => {
+    try {
+      const urlObj = new URL(url)
+      const hostname = urlObj.hostname.replace("www.", "")
+      if (hostname === "web.archive.org") {
+        const match = urlObj.pathname.match(/\/web\/\d+\w*\/(.+)/)
+        if (match) {
+          try {
+            const archived = new URL(match[1])
+            const archivedHost = archived.hostname.replace("www.", "")
+            if (archivedHost === "x.com" || archivedHost === "twitter.com" || archivedHost === "facebook.com") {
+              const parts = archived.pathname.split("/").filter(Boolean)
+              if (parts.length > 0) {
+                return { label: `${archivedHost}/${parts[0]}`, archived: true }
+              }
+            }
+            return { label: archivedHost, archived: true }
+          } catch {
+            return { label: hostname, archived: false }
+          }
+        }
+      }
+      if (hostname === "x.com" || hostname === "twitter.com" || hostname === "facebook.com") {
+        const parts = urlObj.pathname.split("/").filter(Boolean)
+        if (parts.length > 0) {
+          return { label: `${hostname}/${parts[0]}`, archived: false }
+        }
+      }
+      return { label: hostname, archived: false }
+    } catch {
+      return { label: url, archived: false }
+    }
+  }
+
+  return (
+    <div className={`relative mb-12 ${align === "right" ? "md:pl-1/2" : ""}`}>
+      <div className={`flex ${align === "right" ? "md:justify-end" : ""}`}>
+        <Card className="max-w-2xl p-6 hover:border-primary/50 transition-colors">
+          {/* Date Badge */}
+          <div className="inline-block mb-4">
+            <span className="text-xs uppercase tracking-wider bg-primary/10 text-primary px-3 py-1 rounded-full font-semibold">
+              {date}
+            </span>
+          </div>
+
+          {/* Content */}
+          <p className="text-muted-foreground leading-relaxed mb-4 text-pretty">{description}</p>
+
+          {/* Sources */}
+          {sources.length > 0 && (
+            <div className="text-xs text-muted-foreground">
+              <span className="font-semibold">{sources.length > 1 ? sourcesLabel : sourceLabel}</span>{" "}
+              {sources.map((url, idx) => {
+                const info = extractSourceInfo(url)
+                return (
+                  <span key={idx}>
+                    <a href={url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                      {info.label}
+                    </a>
+                    {info.archived && <span className="text-muted-foreground/60"> (archived)</span>}
+                    {idx < sources.length - 1 && ", "}
+                  </span>
+                )
+              })}
+            </div>
+          )}
+        </Card>
+      </div>
+
+      {/* Timeline Dot */}
+      <div className="absolute left-0 md:left-1/2 top-8 w-3 h-3 bg-primary rounded-full -translate-x-1/2 hidden md:block ring-4 ring-background" />
     </div>
   )
 }
