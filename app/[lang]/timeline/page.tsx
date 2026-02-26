@@ -60,7 +60,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               </h1>
             </Link>
             <nav className="flex items-center gap-3 sm:gap-6">
-              <Link href={`/${locale}`} className="text-xs sm:text-sm text-primary font-semibold">
+              <Link href={`/${locale}/timeline`} className="text-xs sm:text-sm text-primary font-semibold">
                 {t.nav.timeline}
               </Link>
               <Link href={`/${locale}/people`} className="text-xs sm:text-sm hover:text-primary transition-colors">
@@ -69,7 +69,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               <Link href={`/${locale}/victims`} className="text-xs sm:text-sm hover:text-primary transition-colors">
                 {t.nav.victims}
               </Link>
-              <LanguageSwitcher currentLang={locale} currentPath="/" />
+              <LanguageSwitcher currentLang={locale} currentPath="/timeline" />
             </nav>
           </div>
         </div>
@@ -163,7 +163,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               .
             </p>
             <div className="flex justify-center gap-6 text-sm">
-              <Link href={`/${locale}`} className="hover:text-primary transition-colors">
+              <Link href={`/${locale}/timeline`} className="hover:text-primary transition-colors">
                 {t.nav.timeline}
               </Link>
               <Link href={`/${locale}/people`} className="hover:text-primary transition-colors">
@@ -196,6 +196,24 @@ function TimelineItem({ date, description, sources, align, sourceLabel, sourcesL
       const hostname = urlObj.hostname.replace("www.", "")
       if (hostname === "web.archive.org") {
         const match = urlObj.pathname.match(/\/web\/\d+\w*\/(.+)/)
+        if (match) {
+          try {
+            const archived = new URL(match[1])
+            const archivedHost = archived.hostname.replace("www.", "")
+            if (archivedHost === "x.com" || archivedHost === "twitter.com" || archivedHost === "facebook.com") {
+              const parts = archived.pathname.split("/").filter(Boolean)
+              if (parts.length > 0) {
+                return { label: `${archivedHost}/${parts[0]}`, archived: true }
+              }
+            }
+            return { label: archivedHost, archived: true }
+          } catch {
+            return { label: hostname, archived: false }
+          }
+        }
+      }
+      if (hostname === "archive.is" || hostname === "archive.ph" || hostname === "archive.today") {
+        const match = urlObj.pathname.match(/\/\d+\/(.+)/)
         if (match) {
           try {
             const archived = new URL(match[1])
