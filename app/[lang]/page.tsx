@@ -106,7 +106,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             <p className="text-sm text-muted-foreground leading-relaxed">
               {t.footer.contribute}{" "}
               <a
-                href="https://forms.google.com"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeJu3Rrt5-Y_a6b6WuE3GomtsccJ1ILf5grbKEL2BK6WC_s0g/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"

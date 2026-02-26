@@ -113,7 +113,7 @@ export default async function VictimsPage({ params }: { params: Promise<{ lang: 
             <h4 className="text-lg font-semibold">PREDATORGATE</h4>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {t.footer.contribute}{" "}
-              <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJu3Rrt5-Y_a6b6WuE3GomtsccJ1ILf5grbKEL2BK6WC_s0g/viewform" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                 {t.footer.googleForm}
               </a>
               . {t.footer.githubText}{" "}
