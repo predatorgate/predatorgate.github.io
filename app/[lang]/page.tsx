@@ -183,12 +183,37 @@ interface TimelineItemProps {
 }
 
 function TimelineItem({ date, description, sources, align, sourceLabel, sourcesLabel }: TimelineItemProps) {
-  const extractDomain = (url: string) => {
+  const extractSourceInfo = (url: string): { label: string; archived: boolean } => {
     try {
       const urlObj = new URL(url)
-      return urlObj.hostname.replace("www.", "")
+      const hostname = urlObj.hostname.replace("www.", "")
+      if (hostname === "web.archive.org") {
+        const match = urlObj.pathname.match(/\/web\/\d+\w*\/(.+)/)
+        if (match) {
+          try {
+            const archived = new URL(match[1])
+            const archivedHost = archived.hostname.replace("www.", "")
+            if (archivedHost === "x.com" || archivedHost === "twitter.com" || archivedHost === "facebook.com") {
+              const parts = archived.pathname.split("/").filter(Boolean)
+              if (parts.length > 0) {
+                return { label: `${archivedHost}/${parts[0]}`, archived: true }
+              }
+            }
+            return { label: archivedHost, archived: true }
+          } catch {
+            return { label: hostname, archived: false }
+          }
+        }
+      }
+      if (hostname === "x.com" || hostname === "twitter.com" || hostname === "facebook.com") {
+        const parts = urlObj.pathname.split("/").filter(Boolean)
+        if (parts.length > 0) {
+          return { label: `${hostname}/${parts[0]}`, archived: false }
+        }
+      }
+      return { label: hostname, archived: false }
     } catch {
-      return url
+      return { label: url, archived: false }
     }
   }
 
@@ -210,14 +235,18 @@ function TimelineItem({ date, description, sources, align, sourceLabel, sourcesL
           {sources.length > 0 && (
             <div className="text-xs text-muted-foreground">
               <span className="font-semibold">{sources.length > 1 ? sourcesLabel : sourceLabel}</span>{" "}
-              {sources.map((url, idx) => (
-                <span key={idx}>
-                  <a href={url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    {extractDomain(url)}
-                  </a>
-                  {idx < sources.length - 1 && ", "}
-                </span>
-              ))}
+              {sources.map((url, idx) => {
+                const info = extractSourceInfo(url)
+                return (
+                  <span key={idx}>
+                    <a href={url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                      {info.label}
+                    </a>
+                    {info.archived && <span className="text-muted-foreground/60"> (archived)</span>}
+                    {idx < sources.length - 1 && ", "}
+                  </span>
+                )
+              })}
             </div>
           )}
         </Card>
