@@ -1,5 +1,13 @@
 {
   "source_definitions": {
+    "vima_predator": {
+      "label": {
+        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (ΑΠΔΠΧ)",
+        "en": "Hellenic Data Protection Authority (APDPX)"
+      },
+      "url": "https://www.tovima.gr/2026/03/08/dikaiosyni/ypoklopes-i-lista-menoudakou-sto-fos-oi-stoxoi-tou-pretador-kai-i-siopi",
+      "method": "predator"
+    },
     "insidestory_eyp": {
       "label": {
         "gr": "Αντιεισαγγελέας του Αρείου Πάγου",
@@ -140,11 +148,11 @@
       "Θοδωρής Λάγιος": [
         "adae_eyp"
       ],
-      "Ολγα Γεροβασίλη": [
+      "Όλγα Γεροβασίλη": [
         "documento_1"
       ],
       "Βασίλης Κικίλιας": [
-        "documento_1"
+        "vima_predator"
       ],
       "Χαράλαµπος Λαλούσης": [
         "adae_eyp"
@@ -200,7 +208,7 @@
       "Γιώργος Τράγκας": [
         "documento_4"
       ],
-      "Αρης Σπίνος": [
+      "Άρης Σπίνος": [
         "documento_4"
       ],
       "Γιώργος Φιλιόπουλος": [
@@ -216,13 +224,13 @@
         "documento_4"
       ],
       "Ελίνα Κυπραίου": [
-        "documento_2"
+        "vima_predator"
       ],
       "Γκρατσιέλα Κλάδη": [
         "documento_2"
       ],
       "Βασίλης Γκρίζης": [
-        "documento_2"
+        "vima_predator"
       ],
       "Ολίνκα Βαρβιτσιώτη": [
         "documento_2"
@@ -231,49 +239,58 @@
         "documento_2"
       ],
       "Ορσάκη Ρουσσέτου": [
-        "documento_2"
+        "vima_predator"
       ],
       "Αμφιλόχιος": [
-        "documento_2"
+        "vima_predator"
       ],
-      "Βαγγέλης Πιττερός": [
-        "documento_2"
+      "Βαγγέλης Πιτερός": [
+        "vima_predator"
       ],
       "Πέτρος Κουσουλός": [
         "documento_2"
       ],
       "Σπύρος Σιδέρης": [
-        "documento_2"
+        "vima_predator"
       ],
       "Μαρία Σαράφογλου": [
         "documento_2"
       ],
       "Γιώργος Πατεράκης": [
-        "documento_2"
+        "vima_predator"
       ],
       "Αγγελική Ρούσσου": [
-        "documento_2"
+        "vima_predator"
       ],
       "Χρήστος Αγραφιώτης": [
         "documento_2"
       ],
       "Γιάννης Αναστασάκος": [
-        "documento_2"
+        "vima_predator"
       ],
       "Ευγενία Μανωλίδου": [
-        "documento_1"
+        "vima_predator"
       ],
       "Χρήστος Σταϊκούρας": [
         "documento_1"
       ],
       "Παναγιώτης Αρκουμανέας": [
-        "documento_1"
+        "vima_predator"
       ],
       "Λαμπρινή Ρόρη": [
         "documento_3"
       ],
+      "Αυγή Ανδοσίδου": [
+        "vima_predator"
+      ],
+      "Στέλλα Τσαντήλα": [
+        "vima_predator"
+      ],
+      "Ευρυπίδης Γιάζος": [
+        "vima_predator"
+      ],
       "Νίκος Μπάμπαλης": [
-        "documento_3"
+        "vima_predator"
       ],
       "Ροσάννα Μόρτογλου": [
         "documento_3"
@@ -294,7 +311,7 @@
         "documento_3"
       ],
       "Νανά Παλαιτσάκη": [
-        "documento_3"
+        "vima_predator"
       ],
       "Παρασκευή (Βιβή) Παπουτσάκη": [
         "documento_3"
@@ -303,7 +320,7 @@
         "documento_3"
       ],
       "Λία Αθανασίου": [
-        "documento_3"
+        "vima_predator"
       ],
       "Απόστολος Παυλίδης": [
         "documento_3"
@@ -312,19 +329,19 @@
         "documento_3"
       ],
       "Αλεξάνδρα Σδούκου": [
-        "documento_3"
+        "vima_predator"
       ],
       "Βασίλης Ανδρικόπουλος": [
         "documento_3"
       ],
       "Γιώργος Σταμαδιάνος": [
-        "documento_3"
+        "vima_predator"
       ],
       "Γιάννης Οικονόμου": [
-        "documento_3"
+        "vima_predator"
       ],
       "Νίκη Κεραμέως": [
-        "documento_3"
+        "vima_predator"
       ],
       "Βασιλική Βλάχου": [
         "apdpx_insidestory_predator_2"
@@ -351,7 +368,7 @@
         "documento_1"
       ],
       "Αριστοτελία Πελώνη": [
-        "documento_1"
+        "vima_predator"
       ],
       "Πόπη Καλαϊτζή": [
         "documento_1"
@@ -360,13 +377,13 @@
         "documento_1"
       ],
       "Ολγα Κεφαλογιάννη": [
-        "documento_1"
+        "vima_predator"
       ],
       "Τζένη Μπαλατσινού": [
-        "documento_1"
+        "vima_predator"
       ],
       "Σπύρος Καρανικόλας": [
-        "documento_2"
+        "vima_predator"
       ],
       "Χάρις Κούτση": [
         "documento_2"
@@ -465,8 +482,8 @@
       "Giorgos Mylonakis": [
         "apdpx_insidestory_predator", "insidestory_eyp"
       ],
-      "Vangelis Pitteros": [
-        "documento_2"
+      "Vangelis Piteros": [
+        "vima_predator"
       ],
       "Christos Bardakis": [
         "apdpx_insidestory_predator", "insidestory_eyp"
@@ -475,10 +492,10 @@
         "documento_2"
       ],
       "Vasilis Gkrizis": [
-        "documento_2"
+        "vima_predator"
       ],
       "Spyros Sideris": [
-        "documento_2"
+        "vima_predator"
       ],
       "Tina Messaropoulou": [
         "apdpx_insidestory_predator", "insidestory_eyp"
@@ -514,7 +531,7 @@
         "documento_1"
       ],
       "Giorgos Paterakis": [
-        "documento_2"
+        "vima_predator"
       ],
       "Eva Kaili": [
         "documento_4"
@@ -547,19 +564,19 @@
         "apdpx_insidestory_predator_2"
       ],
       "Niki Kerameus": [
-        "documento_3"
+        "vima_predator"
       ],
       "Giannis Oikonomou": [
-        "documento_3"
+        "vima_predator"
       ],
       "Giorgos Stamadianos": [
-        "documento_3"
+        "vima_predator"
       ],
       "Vasilis Andrikopoulos": [
         "documento_3"
       ],
       "Alexandra Sdoukou": [
-        "documento_3"
+        "vima_predator"
       ],
       "Giannis Theodoratos": [
         "documento_3"
@@ -568,19 +585,19 @@
         "documento_3"
       ],
       "Lia Athanasiou": [
-        "documento_3"
+        "vima_predator"
       ],
       "Meropi Komninou": [
         "documento_3"
       ],
       "Vasilis Kikilias": [
-        "documento_1"
+        "vima_predator"
       ],
       "Eugenia Manolidou": [
-        "documento_1"
+        "vima_predator"
       ],
       "Nana Palaitsaki": [
-        "documento_3"
+        "vima_predator"
       ],
       "Paraskevi (Vivi) Papoutsakis": [
         "documento_3"
@@ -597,8 +614,17 @@
       "Giorgos Politis": [
         "documento_3"
       ],
+      "Stella Tsantila": [
+        "vima_predator"
+      ],
+      "Avgi Andosidou": [
+        "vima_predator"
+      ],
+      "Euripides Giazos": [
+        "vima_predator"
+      ],
       "Nikos Babalis": [
-        "documento_3"
+        "vima_predator"
       ],
       "Rosanna Mortoglou": [
         "documento_3"
@@ -610,7 +636,7 @@
         "documento_3"
       ],
       "Angeliki Roussou": [
-        "documento_2"
+        "vima_predator"
       ],
       "Eirini Karypidi": [
         "documento_1"
@@ -619,7 +645,7 @@
         "documento_2"
       ],
       "Orsaki Roussetou": [
-        "documento_2"
+        "vima_predator"
       ],
       "Charis Koutsi": [
         "documento_2"
@@ -628,10 +654,10 @@
         "documento_2"
       ],
       "Spyros Karanikolas": [
-        "documento_2"
+        "vima_predator"
       ],
       "Amphilochios": [
-        "documento_2"
+        "vima_predator"
       ],
       "Nikos Papathanasis": [
         "documento_2"
@@ -640,7 +666,7 @@
         "documento_2"
       ],
       "Elina Kypraiou": [
-        "documento_2"
+        "vima_predator"
       ],
       "Akis Skertsos": [
         "documento_2"
@@ -649,16 +675,16 @@
         "documento_1"
       ],
       "Aristotelia Peloni": [
-        "documento_1"
+        "vima_predator"
       ],
       "Marina Patouli": [
         "documento_1"
       ],
       "Panagiotis Arkoumaneas": [
-        "documento_1"
+        "vima_predator"
       ],
       "Giannis Anastasakos": [
-        "documento_2"
+        "vima_predator"
       ],
       "Miltiadis Varvitsiotis": [
         "documento_2"
@@ -703,10 +729,10 @@
         "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Jenny Balatsinou": [
-        "documento_1"
+        "vima_predator"
       ],
       "Olga Kefalogianni": [
-        "documento_1"
+        "vima_predator"
       ],
       "Nikos Chardalias": [
         "documento_1"
