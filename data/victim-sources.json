@@ -223,6 +223,15 @@
       "Εύα Καϊλή": [
         "documento_4"
       ],
+      "Μιχάλης Καραμαλάκης": [
+        "vima_predator"
+      ],
+      "Γιώργος Πολίτης": [
+        "vima_predator"
+      ],
+      "Αντώνης Δελατόλας": [
+        "vima_predator"
+      ],
       "Ελίνα Κυπραίου": [
         "vima_predator"
       ],
@@ -298,9 +307,6 @@
       "Κώστας Τούμπουρος": [
         "documento_3"
       ],
-      "Γιώργος Πολίτης": [
-        "documento_3"
-      ],
       "Δημήτρης Μαζιώτης": [
         "documento_3"
       ],
@@ -346,12 +352,6 @@
       "Βασιλική Βλάχου": [
         "apdpx_insidestory_predator_2"
       ],
-      "Μιχάλης Καραμαλάκης": [
-        "documento_3"
-      ],
-      "Αντώνης Δελλατόλας": [
-        "documento_1"
-      ],
       "Γιάννης Ραχωβίτσας": [
         "documento_1"
       ],
@@ -389,7 +389,7 @@
         "documento_2"
       ],
       "Νίκος Παπαθανάσης": [
-        "documento_2"
+        "vima_predator"
       ],
       "Ακης Σκέρτσος": [
         "documento_2"
@@ -527,9 +527,6 @@
       "Giannis Rachovitsas": [
         "documento_1"
       ],
-      "Antonis Dellatolas": [
-        "documento_1"
-      ],
       "Giorgos Paterakis": [
         "vima_predator"
       ],
@@ -558,7 +555,7 @@
         "apdpx_insidestory_predator", "insidestory_eyp"
       ],
       "Michalis Karamalakis": [
-        "documento_3"
+        "vima_predator"
       ],
       "Vasiliki Vlachou": [
         "apdpx_insidestory_predator_2"
@@ -611,9 +608,6 @@
       "Dimitris Maziotis": [
         "documento_3"
       ],
-      "Giorgos Politis": [
-        "documento_3"
-      ],
       "Stella Tsantila": [
         "vima_predator"
       ],
@@ -660,10 +654,16 @@
         "vima_predator"
       ],
       "Nikos Papathanasis": [
-        "documento_2"
+        "vima_predator"
       ],
       "Christos Agrafiotis": [
         "documento_2"
+      ],
+      "Giorgos Politis": [
+        "vima_predator"
+      ],
+      "Antonis Delatolas": [
+        "vima_predator"
       ],
       "Elina Kypraiou": [
         "vima_predator"
