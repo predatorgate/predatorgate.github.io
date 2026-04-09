@@ -126,8 +126,7 @@ def translate_batch(client, batch_rows):
         items.append(
             f"[{i}] Date: {row[0]}\n"
             f"Event: {row[1]}\n"
-            f"Link: {row[2]}\n"
-            f"Sort: {row[3]}"
+            f"Link: {row[2]}"
         )
 
     prompt = (
@@ -300,7 +299,6 @@ def main():
                     eid = make_entry_id(orig[0], orig[1])
                     trans[0] = orig[0]
                     trans[2] = orig[2]
-                    trans[3] = orig[3]
                     if len(trans) < 5:
                         trans.append(eid)
                     else:
