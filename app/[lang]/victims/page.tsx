@@ -69,7 +69,7 @@ export default async function VictimsPage({ params }: { params: Promise<{ lang: 
               </h1>
             </Link>
             <nav className="flex items-center gap-3 sm:gap-6">
-              <Link href={`/${locale}`} className="text-xs sm:text-sm hover:text-primary transition-colors">
+              <Link href={`/${locale}/timeline`} className="text-xs sm:text-sm hover:text-primary transition-colors">
                 {t.nav.timeline}
               </Link>
               <Link href={`/${locale}/people`} className="text-xs sm:text-sm hover:text-primary transition-colors">
