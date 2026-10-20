@@ -56,6 +56,14 @@
       "url": "https://govwatch.gr/finds/eyp-parakoloythisi-toy-eyrovoyleyti-kyrtsoy-kai-toy-dimosiografoy-tellogloy",
       "method": "eyp"
     },
+    "nea_dikastirio": {
+      "label": {
+        "gr": "Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (ΑΠΔΠΧ)",
+        "en": "Hellenic Data Protection Authority (APDPX)"
+      },
+      "url": "https://www.tanea.gr/print/2025/11/04/greece/i-eyp-esteile-to-minyma-gia-tin-pagideysi-mou/",
+      "method": "predator"
+    },
     "documento_predator": {
       "label": {
         "gr": "Documento",
@@ -270,6 +278,9 @@
       ],
       "Αγγελική Ρούσσου": [
         "vima_predator"
+      ],
+      "Μαρία Ζώη-Σακαλή": [
+        "nea_dikastirio"
       ],
       "Χρήστος Αγραφιώτης": [
         "documento_2"
@@ -634,6 +645,9 @@
       ],
       "Angeliki Roussou": [
         "vima_predator"
+      ],
+      "Maria Zoi-Sakali": [
+        "nea_dikastirio"
       ],
       "Eirini Karypidi": [
         "documento_1"
